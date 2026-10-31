@@ -139,3 +139,10 @@ test( 'mobile menu overlay has theme colours and its own padding', () => {
 	assert.match( css, /\.wp-block-navigation__responsive-container\.is-menu-open\s*\{[^}]*padding:/ );
 	assert.match( css, /is-menu-open[^{]*\.wp-block-navigation-item__content/ );
 } );
+
+test( 'header menu is left-justified so the mobile overlay lists links from the left', () => {
+	assert.match( read( 'parts/header.html' ), /wp:navigation \{[^}]*"layout":\{"type":"flex","justifyContent":"left"\}/ );
+	const css = read( 'style.css' );
+	assert.match( css, /\.wp-block-navigation \.wp-block-navigation__responsive-container\.is-menu-open\s*\{[^}]*padding:/ );
+	assert.match( css, /\.wp-block-navigation-item__content\s*\{[^}]*text-align:\s*left/ );
+} );

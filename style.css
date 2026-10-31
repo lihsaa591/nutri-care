@@ -409,7 +409,7 @@ p {
 }
 
 /* Mobile menu overlay */
-.wp-block-navigation__responsive-container.is-menu-open {
+.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open {
 	padding: 1.5rem var(--nc-gutter) 2rem;
 }
 
@@ -430,4 +430,5 @@ p {
 	font-weight: 600;
 	letter-spacing: -0.01em;
 	padding: 0.4rem 0;
+	text-align: left;
 }
