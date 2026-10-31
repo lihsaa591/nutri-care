@@ -212,3 +212,12 @@ test( 'notice.css colours the logo mark with fixed Sage values for the admin', (
 		assert.match( css, new RegExp( `\\.nutri-care-notice \\.${ cl }\\s*\\{` ), `${ cl } not styled in the notice` )
 	);
 } );
+
+test( 'author details point at the WordPress.org profile', () => {
+	const css = read( 'style.css' );
+	const readme = read( 'readme.txt' );
+	assert.match( css, /^Author: Aashil Bijukshe$/m );
+	assert.match( css, /^Author URI: https:\/\/profiles\.wordpress\.org\/lihsaa\/$/m );
+	assert.match( readme, /^Contributors: lihsaa$/m );
+	assert.match( readme, /\(C\) 2026 Aashil Bijukshe/ );
+} );

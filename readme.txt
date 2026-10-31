@@ -1,5 +1,5 @@
 === Nutri Care ===
-Contributors: lihsaa591
+Contributors: lihsaa
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 7.4
@@ -38,7 +38,7 @@ No. Add a form block or plugin of your choice in the contact pattern.
 
 == Copyright ==
 
-Nutri Care WordPress Theme, (C) 2026 Aashil.
+Nutri Care WordPress Theme, (C) 2026 Aashil Bijukshe.
 Nutri Care is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.
