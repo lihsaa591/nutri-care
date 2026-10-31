@@ -11,18 +11,18 @@
 			"palette": [
 				{
 					"slug": "contrast",
-					"color": "#0F3A46",
-					"name": "Deep teal"
+					"color": "#24362B",
+					"name": "Sage deep"
 				},
 				{
 					"slug": "accent",
-					"color": "#1F7A8C",
-					"name": "Teal"
+					"color": "#4B7556",
+					"name": "Sage"
 				},
 				{
 					"slug": "soft",
-					"color": "#EEF6F7",
-					"name": "Soft teal"
+					"color": "#EEF4EE",
+					"name": "Sage soft"
 				},
 				{
 					"slug": "base",
@@ -31,23 +31,23 @@
 				},
 				{
 					"slug": "muted",
-					"color": "#46636B",
+					"color": "#4A5F50",
 					"name": "Slate"
 				},
 				{
 					"slug": "deep",
-					"color": "#0A2A33",
-					"name": "Night teal"
+					"color": "#17241B",
+					"name": "Sage night"
 				},
 				{
 					"slug": "tint",
-					"color": "#8CC7D2",
-					"name": "Teal tint"
+					"color": "#A9C9B0",
+					"name": "Sage tint"
 				},
 				{
 					"slug": "line",
-					"color": "#D5E4E7",
-					"name": "Teal line"
+					"color": "#D6E3D8",
+					"name": "Sage line"
 				}
 			]
 		},

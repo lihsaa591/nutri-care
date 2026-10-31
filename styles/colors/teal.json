@@ -1,24 +1,24 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "Sage",
+	"title": "Teal",
 	"settings": {
 		"color": {
 			"palette": [
 				{
 					"slug": "contrast",
-					"color": "#24362B",
-					"name": "Sage deep"
+					"color": "#0F3A46",
+					"name": "Deep teal"
 				},
 				{
 					"slug": "accent",
-					"color": "#4B7556",
-					"name": "Sage"
+					"color": "#1F7A8C",
+					"name": "Teal"
 				},
 				{
 					"slug": "soft",
-					"color": "#EEF4EE",
-					"name": "Sage soft"
+					"color": "#EEF6F7",
+					"name": "Soft teal"
 				},
 				{
 					"slug": "base",
@@ -27,23 +27,23 @@
 				},
 				{
 					"slug": "muted",
-					"color": "#4A5F50",
+					"color": "#46636B",
 					"name": "Slate"
 				},
 				{
 					"slug": "deep",
-					"color": "#17241B",
-					"name": "Sage night"
+					"color": "#0A2A33",
+					"name": "Night teal"
 				},
 				{
 					"slug": "tint",
-					"color": "#A9C9B0",
-					"name": "Sage tint"
+					"color": "#8CC7D2",
+					"name": "Teal tint"
 				},
 				{
 					"slug": "line",
-					"color": "#D6E3D8",
-					"name": "Sage line"
+					"color": "#D5E4E7",
+					"name": "Teal line"
 				}
 			]
 		}

@@ -21,7 +21,7 @@ const ratio = ( a, b ) => {
 };
 
 const palettes = { default: readJson( 'theme.json' ).settings.color.palette };
-[ 'sage', 'terracotta', 'ocean', 'plum' ].forEach( ( n ) => {
+[ 'teal', 'terracotta', 'ocean', 'plum' ].forEach( ( n ) => {
 	const file = `styles/colors/${ n }.json`;
 	assert.ok( fs.existsSync( path.join( root, file ) ), `${ file } missing` );
 	palettes[ n ] = readJson( file ).settings.color.palette;
@@ -47,7 +47,7 @@ test( 'every palette meets AA contrast', () => {
 } );
 
 test( 'colour variations have titles', () => {
-	[ [ 'sage', 'Sage' ], [ 'terracotta', 'Terracotta' ], [ 'ocean', 'Ocean' ], [ 'plum', 'Plum' ] ].forEach( ( [ n, title ] ) =>
+	[ [ 'teal', 'Teal' ], [ 'terracotta', 'Terracotta' ], [ 'ocean', 'Ocean' ], [ 'plum', 'Plum' ] ].forEach( ( [ n, title ] ) =>
 		assert.strictEqual( readJson( `styles/colors/${ n }.json` ).title, title )
 	);
 } );
@@ -84,4 +84,16 @@ test( 'display text follows the heading font through a theme.json custom value',
 
 test( 'readme credits Inter under the OFL', () => {
 	assert.match( fs.readFileSync( path.join( root, 'readme.txt' ), 'utf8' ), /Inter by Rasmus Andersson/ );
+} );
+
+test( 'the default palette is Sage green', () => {
+	const pal = readJson( 'theme.json' ).settings.color.palette;
+	const c = ( slug ) => pal.find( ( x ) => x.slug === slug ).color.toUpperCase();
+	assert.strictEqual( c( 'contrast' ), '#24362B' );
+	assert.strictEqual( c( 'accent' ), '#4B7556' );
+	assert.strictEqual( c( 'soft' ), '#EEF4EE' );
+} );
+
+test( 'there is no sage variation because sage is the default', () => {
+	assert.ok( ! fs.existsSync( path.join( root, 'styles/colors/sage.json' ) ) );
 } );
