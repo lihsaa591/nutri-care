@@ -81,15 +81,43 @@ Tags: block-patterns, full-site-editing, blog, one-column, custom-colors, wide-b
 }
 
 .nc-plate {
-	margin-left: auto;
-	margin-right: auto;
+	aspect-ratio: 1;
+	background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 0 94%, transparent 94%);
+	margin: 0 auto 2rem;
 	max-width: 540px;
 	position: relative;
 }
 
-.nc-plate svg {
-	display: block;
-	height: auto;
+.nc-plate::before {
+	background: conic-gradient(
+		#1f7a8c 0 49%,
+		transparent 49% 50%,
+		#0f3a46 50% 74%,
+		transparent 74% 75%,
+		#8cc7d2 75% 99%,
+		transparent 99% 100%
+	);
+	border-radius: 50%;
+	content: "";
+	inset: 9%;
+	-webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 16px), #000 calc(100% - 15px));
+	mask: radial-gradient(farthest-side, transparent calc(100% - 16px), #000 calc(100% - 15px));
+	position: absolute;
+}
+
+.nc-plate__photo {
+	border: 6px solid var(--wp--preset--color--base);
+	border-radius: 50%;
+	inset: 16.5%;
+	margin: 0;
+	overflow: hidden;
+	position: absolute;
+}
+
+.nc-plate__photo img {
+	border-radius: 0;
+	height: 100%;
+	object-fit: cover;
 	width: 100%;
 }
 
@@ -128,7 +156,11 @@ Tags: block-patterns, full-site-editing, blog, one-column, custom-colors, wide-b
 }
 
 .nc-plate__caption {
+	bottom: -2rem;
 	color: #4f6f77;
+	left: 0;
+	position: absolute;
+	right: 0;
 	font-size: 0.6875rem;
 	font-weight: 600;
 	letter-spacing: 0.14em;

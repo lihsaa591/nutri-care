@@ -108,3 +108,11 @@ test( 'translatable strings contain no HTML entities', () => {
 test( 'services rows do not force nowrap in block markup', () => {
 	assert.doesNotMatch( read( 'services' ), /"flexWrap":"nowrap"/ );
 } );
+
+test( 'hero plate photo and labels are editable blocks, not raw HTML', () => {
+	const src = read( 'hero' );
+	assert.doesNotMatch( src, /<!-- wp:html/ );
+	assert.match( src, /<!-- wp:image \{[^}]*nc-plate__photo[^}]*\} -->[\s\S]*assets\/images\/plate-bowl\.webp/ );
+	assert.strictEqual( ( src.match( /<!-- wp:paragraph \{"className":"nc-plate__label/g ) || [] ).length, 3 );
+	assert.match( src, /<!-- wp:paragraph \{"className":"nc-plate__caption"\}/ );
+} );

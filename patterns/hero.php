@@ -37,25 +37,27 @@
 <!-- /wp:column -->
 
 <!-- wp:column {"width":"48%"} -->
-<div class="wp-block-column" style="flex-basis:48%"><!-- wp:html -->
-<div class="nc-plate" role="img" aria-label="<?php esc_attr_e( 'A balanced plate: half vegetables and fruit, a quarter lean protein, a quarter whole grains', 'nutri-care' ); ?>">
-<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-<defs><clipPath id="nc-plate-clip"><circle cx="250" cy="250" r="168"/></clipPath></defs>
-<circle cx="250" cy="250" r="235" fill="#fff" opacity=".7"/>
-<image href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/plate-bowl.webp" x="70" y="-5" width="360" height="480" preserveAspectRatio="none" clip-path="url(#nc-plate-clip)"/>
-<circle cx="250" cy="250" r="168" fill="none" stroke="#fff" stroke-width="6"/>
-<g fill="none" stroke-width="16" transform="rotate(-90 250 250)">
-<circle cx="250" cy="250" r="196" stroke="#1F7A8C" stroke-dasharray="602 1232" stroke-dashoffset="0"/>
-<circle cx="250" cy="250" r="196" stroke="#0F3A46" stroke-dasharray="301 1232" stroke-dashoffset="-616"/>
-<circle cx="250" cy="250" r="196" stroke="#8cc7d2" stroke-dasharray="301 1232" stroke-dashoffset="-931"/>
-</g>
-</svg>
+<div class="wp-block-column" style="flex-basis:48%"><!-- wp:group {"className":"nc-plate","layout":{"type":"default"}} -->
+<div class="wp-block-group nc-plate"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"nc-plate__photo"} -->
+<figure class="wp-block-image size-large nc-plate__photo"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/plate-bowl.webp" alt="<?php esc_attr_e( 'A bowl of oats, banana and berries', 'nutri-care' ); ?>"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph {"className":"nc-plate__label nc-plate__label--grains"} -->
 <p class="nc-plate__label nc-plate__label--grains"><strong>25%</strong> <?php esc_html_e( 'Whole grains', 'nutri-care' ); ?></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"nc-plate__label nc-plate__label--veg"} -->
 <p class="nc-plate__label nc-plate__label--veg"><strong>50%</strong> <?php esc_html_e( 'Vegetables & fruit', 'nutri-care' ); ?></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"nc-plate__label nc-plate__label--protein"} -->
 <p class="nc-plate__label nc-plate__label--protein"><strong>25%</strong> <?php esc_html_e( 'Lean protein', 'nutri-care' ); ?></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"nc-plate__caption"} -->
 <p class="nc-plate__caption"><?php esc_html_e( 'A balanced plate, simplified', 'nutri-care' ); ?></p>
-</div>
-<!-- /wp:html --></div>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
 <!-- /wp:group -->
