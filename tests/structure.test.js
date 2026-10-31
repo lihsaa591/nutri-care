@@ -191,7 +191,7 @@ test( 'the built zip contains the theme and none of the development files', () =
 	const { execFileSync } = require( 'node:child_process' );
 	execFileSync( 'bash', [ path.join( root, 'bin/build-zip.sh' ) ], { cwd: root, stdio: 'ignore' } );
 	const files = execFileSync( 'unzip', [ '-Z1', path.join( root, 'dist/nutri-care.zip' ) ], { encoding: 'utf8' } ).split( '\n' );
-	[ 'style.css', 'theme.json', 'readme.txt', 'screenshot.png', 'functions.php', 'templates/front-page.html' ].forEach( ( f ) =>
+	[ 'style.css', 'theme.json', 'readme.txt', 'screenshot.png', 'functions.php', 'templates/front-page.html', 'languages/nutri-care.pot', 'styles/colors/teal.json', 'styles/typography/inter.json', 'assets/css/notice.css' ].forEach( ( f ) =>
 		assert.ok( files.includes( `nutri-care/${ f }` ), `${ f } missing from zip` )
 	);
 	const dev = files.filter( ( f ) => /(^|\/)(tests|bin|branding|vendor|node_modules|\.github|\.git)\/|phpcs\.xml|phpunit\.xml|composer\.|package(-lock)?\.json|\.sh$/.test( f ) );
