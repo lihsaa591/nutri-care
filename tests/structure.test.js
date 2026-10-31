@@ -146,3 +146,10 @@ test( 'header menu is left-justified so the mobile overlay lists links from the 
 	assert.match( css, /\.wp-block-navigation \.wp-block-navigation__responsive-container\.is-menu-open\s*\{[^}]*padding:/ );
 	assert.match( css, /\.wp-block-navigation-item__content\s*\{[^}]*text-align:\s*left/ );
 } );
+
+test( 'plate children are positioned with selectors strong enough to beat the editor', () => {
+	const css = read( 'style.css' );
+	assert.match( css, /\.nc-plate \.nc-plate__photo\s*\{[^}]*position:\s*absolute/ );
+	assert.match( css, /\.nc-plate \.nc-plate__label\s*\{[^}]*position:\s*absolute/ );
+	assert.match( css, /\.nc-plate \.nc-plate__caption\s*\{[^}]*position:\s*absolute/ );
+} );

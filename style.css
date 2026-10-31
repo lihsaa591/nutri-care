@@ -105,7 +105,7 @@ Tags: block-patterns, full-site-editing, blog, one-column, custom-colors, wide-b
 	position: absolute;
 }
 
-.nc-plate__photo {
+.nc-plate .nc-plate__photo {
 	border: 6px solid var(--wp--preset--color--base);
 	border-radius: 50%;
 	inset: 16.5%;
@@ -114,14 +114,14 @@ Tags: block-patterns, full-site-editing, blog, one-column, custom-colors, wide-b
 	position: absolute;
 }
 
-.nc-plate__photo img {
+.nc-plate .nc-plate__photo img {
 	border-radius: 0;
 	height: 100%;
 	object-fit: cover;
 	width: 100%;
 }
 
-.nc-plate__label {
+.nc-plate .nc-plate__label {
 	background: var(--wp--preset--color--base);
 	border-radius: var(--wp--custom--radius);
 	box-shadow: 0 8px 22px rgba(15, 58, 70, 0.13);
@@ -133,29 +133,29 @@ Tags: block-patterns, full-site-editing, blog, one-column, custom-colors, wide-b
 	position: absolute;
 }
 
-.nc-plate__label strong {
+.nc-plate .nc-plate__label strong {
 	color: var(--wp--preset--color--contrast);
 	display: block;
 	font-size: 1.375rem;
 	letter-spacing: -0.03em;
 }
 
-.nc-plate__label--grains {
+.nc-plate .nc-plate__label--grains {
 	left: 0;
 	top: 8%;
 }
 
-.nc-plate__label--veg {
+.nc-plate .nc-plate__label--veg {
 	right: 0;
 	top: 42%;
 }
 
-.nc-plate__label--protein {
+.nc-plate .nc-plate__label--protein {
 	bottom: 12%;
 	left: 0;
 }
 
-.nc-plate__caption {
+.nc-plate .nc-plate__caption {
 	bottom: 2%;
 	color: var(--wp--preset--color--muted);
 	left: 0;
@@ -322,12 +322,12 @@ Tags: block-patterns, full-site-editing, blog, one-column, custom-colors, wide-b
 		flex-basis: 100%;
 	}
 
-	.nc-plate__label {
+	.nc-plate .nc-plate__label {
 		font-size: 0.6875rem;
 		padding: 0.4rem 0.6rem;
 	}
 
-	.nc-plate__label strong {
+	.nc-plate .nc-plate__label strong {
 		font-size: 1rem;
 	}
 }
@@ -431,4 +431,11 @@ p {
 	letter-spacing: -0.01em;
 	padding: 0.4rem 0;
 	text-align: left;
+}
+
+/* Block editor: keep the replaceable photo filling the plate circle */
+.nc-plate .nc-plate__photo .components-resizable-box__container {
+	height: 100% !important;
+	position: absolute !important;
+	width: 100% !important;
 }
