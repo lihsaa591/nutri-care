@@ -21,6 +21,13 @@ class LogoTest extends TestCase {
 		$this->assertStringContainsString( 'wp-block-site-logo', $out );
 	}
 
+	public function test_mark_svg_is_the_bare_decorative_svg_without_the_block_wrapper(): void {
+		$svg = nutri_care_mark_svg();
+		$this->assertStringStartsWith( '<svg class="nc-mark"', $svg );
+		$this->assertStringContainsString( 'aria-hidden="true"', $svg );
+		$this->assertStringNotContainsString( 'wp-block-site-logo', $svg );
+	}
+
 	public function test_fallback_treats_whitespace_as_empty(): void {
 		$this->assertStringContainsString( 'nc-mark', nutri_care_site_logo_fallback( " \n\t " ) );
 	}

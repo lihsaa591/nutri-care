@@ -205,3 +205,10 @@ test( 'MeroDiet is described accurately: no appointment claims in the theme desc
 	assert.match( read( 'assets/js/notice.js' ), /errorMessage/ );
 	assert.ok( fs.existsSync( path.join( root, 'assets/css/notice.css' ) ), 'notice.css missing' );
 } );
+
+test( 'notice.css colours the logo mark with fixed Sage values for the admin', () => {
+	const css = read( 'assets/css/notice.css' );
+	[ 'nc-mark__a', 'nc-mark__c', 'nc-mark__t', 'nc-mark__leaf', 'nc-mark__vein' ].forEach( ( cl ) =>
+		assert.match( css, new RegExp( `\\.nutri-care-notice \\.${ cl }\\s*\\{` ), `${ cl } not styled in the notice` )
+	);
+} );

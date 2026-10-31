@@ -98,6 +98,8 @@ class NoticeTest extends TestCase {
 		$this->assertStringContainsString( 'Progress dashboard', $out );
 		$this->assertStringNotContainsStringIgnoringCase( 'appointment', $out );
 		$this->assertStringContainsString( 'nutri-care-notice__icon', $out );
+		$this->assertStringContainsString( 'class="nc-mark"', $out );
+		$this->assertStringNotContainsString( 'dashicons-carrot', $out );
 	}
 
 	public function test_assets_are_enqueued_only_when_the_notice_will_show(): void {

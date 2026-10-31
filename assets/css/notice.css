@@ -17,10 +17,32 @@
 	width: 44px;
 }
 
-.nutri-care-notice__icon .dashicons {
-	font-size: 24px;
-	height: 24px;
-	width: 24px;
+.nutri-care-notice__icon .nc-mark {
+	height: 30px;
+	width: 30px;
+}
+
+.nutri-care-notice .nc-mark__a {
+	stroke: #4b7556;
+}
+
+.nutri-care-notice .nc-mark__c {
+	stroke: #24362b;
+}
+
+.nutri-care-notice .nc-mark__t {
+	stroke: #a9c9b0;
+}
+
+.nutri-care-notice .nc-mark__leaf {
+	fill: #4b7556;
+}
+
+.nutri-care-notice .nc-mark__vein {
+	fill: none;
+	stroke: #fff;
+	stroke-linecap: round;
+	stroke-width: 1.6;
 }
 
 .nutri-care-notice__body p {

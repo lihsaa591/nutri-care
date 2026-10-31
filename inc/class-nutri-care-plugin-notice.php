@@ -105,7 +105,7 @@ class Nutri_Care_Plugin_Notice {
 		$dismiss_url  = wp_nonce_url( admin_url( 'admin-post.php?action=' . self::ACTION ), self::ACTION );
 		?>
 		<div class="notice notice-info is-dismissible nutri-care-notice" data-dismiss-url="<?php echo esc_url( $dismiss_url ); ?>">
-			<span class="nutri-care-notice__icon" aria-hidden="true"><span class="dashicons dashicons-carrot"></span></span>
+			<span class="nutri-care-notice__icon" aria-hidden="true"><?php echo nutri_care_mark_svg(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Static, theme-defined SVG markup. ?></span>
 			<div class="nutri-care-notice__body">
 				<p class="nutri-care-notice__title"><strong><?php esc_html_e( 'Nutri Care pairs well with MeroDiet', 'nutri-care' ); ?></strong></p>
 				<p><?php esc_html_e( 'An optional free plugin for dietitians: build meal plans, invite clients to their own portal, and follow their food logs from your WordPress dashboard.', 'nutri-care' ); ?></p>
