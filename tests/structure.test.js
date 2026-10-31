@@ -57,3 +57,20 @@ test( 'templates use header and footer parts', () => {
 		assert.match( html, /wp:template-part \{"slug":"footer"/ );
 	} );
 } );
+
+test( 'front-page composes the ten patterns in order', () => {
+	const html = read( 'templates/front-page.html' );
+	const slugs = [ ...html.matchAll( /wp:pattern \{"slug":"nutri-care\/([a-z-]+)"/g ) ].map( ( m ) => m[ 1 ] );
+	assert.deepStrictEqual( slugs, [
+		'hero',
+		'services',
+		'about',
+		'process',
+		'pricing',
+		'testimonials',
+		'faq',
+		'booking-cta',
+		'blog',
+		'contact',
+	] );
+} );
