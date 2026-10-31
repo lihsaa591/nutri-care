@@ -97,3 +97,10 @@ test( 'search empty state says no results and offers a new search', () => {
 test( 'posts index has a level 1 heading', () => {
 	assert.match( read( 'templates/index.html' ), /wp:heading \{"level":1/ );
 } );
+
+test( 'functions.php enqueues style.css on the front end and in the editor', () => {
+	const src = read( 'functions.php' );
+	assert.match( src, /wp_enqueue_style\(\s*'nutri-care-style',\s*get_stylesheet_uri\(\)/ );
+	assert.match( src, /add_action\(\s*'wp_enqueue_scripts',\s*'nutri_care_enqueue_styles'/ );
+	assert.match( src, /add_editor_style\(\s*'style\.css'/ );
+} );
