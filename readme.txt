@@ -55,9 +55,9 @@ Healthy Breakfast by Federica Diliberto (federyka).
 plate-bowl.webp
 https://commons.wikimedia.org/wiki/File:Healthy_Breakfast_(Unsplash).jpg
 
-Salad greens and vegetables, Cambridge, MA by Daderot.
-salad-greens.webp
-https://commons.wikimedia.org/wiki/File:Salad_greens_and_vegetables_-_Cambridge,_MA.jpg
+Vegetables on Cutting Board by F. D. Neal.
+prep-board.webp
+https://commons.wikimedia.org/wiki/File:Vegetables_on_Cutting_Board.jpg
 
 Fruit Platter by Cecilia Par famla_fint.
 fruit-platter.webp
