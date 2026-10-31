@@ -85,3 +85,16 @@ test( 'functions.php registers the nutri-care pattern category', () => {
 	const src = fs.readFileSync( path.join( root, 'functions.php' ), 'utf8' );
 	assert.match( src, /register_block_pattern_category\(\s*'nutri-care'/ );
 } );
+
+test( 'every bundled image is used and credited in readme.txt', () => {
+	const dir = path.join( root, 'assets', 'images' );
+	const readme = fs.existsSync( path.join( root, 'readme.txt' ) )
+		? fs.readFileSync( path.join( root, 'readme.txt' ), 'utf8' )
+		: '';
+	const usage = [ ...names.map( read ), fs.readFileSync( path.join( root, 'style.css' ), 'utf8' ) ].join( '\n' );
+	fs.readdirSync( dir ).forEach( ( img ) => {
+		assert.ok( usage.includes( img ), `${ img } is bundled but never used` );
+		assert.ok( readme.includes( img ), `${ img } is not credited in readme.txt` );
+		assert.match( readme, /CC0/ );
+	} );
+} );
