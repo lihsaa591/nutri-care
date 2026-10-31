@@ -176,3 +176,13 @@ test( 'screenshot.png is 1200x900 and the services heading has space above the f
 	assert.strictEqual( buf.readUInt32BE( 20 ), 900 );
 	assert.match( read( 'style.css' ), /\.wp-block-heading \+ \.wp-block-group\.nc-svc\s*\{[^}]*margin-block-start:\s*1\.75rem/ );
 } );
+
+test( 'style.css and readme.txt agree on Tested up to, and tags match the features', () => {
+	const css = read( 'style.css' );
+	const readme = read( 'readme.txt' );
+	assert.match( css, /^Tested up to: 7\.1$/m );
+	assert.match( readme, /^Tested up to: 7\.1$/m );
+	const tags = css.match( /^Tags: (.+)$/m )[ 1 ].split( /,\s*/ );
+	assert.ok( ! tags.includes( 'accessibility-ready' ), 'accessibility-ready triggers a separate review' );
+	[ 'custom-logo', 'style-variations', 'block-patterns', 'full-site-editing' ].forEach( ( t ) => assert.ok( tags.includes( t ), `${ t } tag missing` ) );
+} );
