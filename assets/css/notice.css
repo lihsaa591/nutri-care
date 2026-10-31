@@ -1,0 +1,72 @@
+.nutri-care-notice {
+	align-items: flex-start;
+	display: flex;
+	gap: 16px;
+	padding: 16px 44px 16px 16px;
+}
+
+.nutri-care-notice__icon {
+	align-items: center;
+	background: #eef4ee;
+	border-radius: 50%;
+	color: #4b7556;
+	display: flex;
+	flex: none;
+	height: 44px;
+	justify-content: center;
+	width: 44px;
+}
+
+.nutri-care-notice__icon .dashicons {
+	font-size: 24px;
+	height: 24px;
+	width: 24px;
+}
+
+.nutri-care-notice__body p {
+	margin: 0 0 8px;
+	padding: 0;
+}
+
+.nutri-care-notice__title {
+	font-size: 14px;
+}
+
+.nutri-care-notice__list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px 18px;
+	list-style: none;
+	margin: 0 0 12px;
+	padding: 0;
+}
+
+.nutri-care-notice__list li {
+	color: #3c434a;
+	margin: 0;
+}
+
+.nutri-care-notice__list li::before {
+	color: #4b7556;
+	content: "\2713\00a0";
+	font-weight: 700;
+}
+
+.nutri-care-notice__body .nutri-care-notice__actions {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-bottom: 0;
+}
+
+.nutri-care-notice__error {
+	color: #b32d2e;
+	margin-top: 8px;
+}
+
+@media (max-width: 600px) {
+	.nutri-care-notice {
+		flex-direction: column;
+	}
+}

@@ -13,7 +13,7 @@ A minimal, editorial block theme for dietitians and nutritionists.
 
 Nutri Care is a clean block theme with ready-made patterns for a dietitian or nutritionist website: a hero with a balanced-plate graphic, services, about, how it works, pricing, testimonials, FAQ, booking call-to-action, journal and contact.
 
-It works fully on its own. If you also want to manage clients, meal plans and appointments from your dashboard, the optional MeroDiet plugin (https://wordpress.org/plugins/merodiet/) pairs well with this theme. The theme shows one dismissible suggestion on the Themes screen and installs nothing unless you click the button.
+It works fully on its own. If you also want to build meal plans, give clients a portal and follow their food logs from your dashboard, the optional MeroDiet plugin (https://wordpress.org/plugins/merodiet/) pairs well with this theme. The theme shows one dismissible suggestion on the Themes screen and installs nothing unless you click the button.
 
 Nutrition information in the demo content is placeholder text and is not medical advice.
 

@@ -197,3 +197,11 @@ test( 'the built zip contains the theme and none of the development files', () =
 	const dev = files.filter( ( f ) => /(^|\/)(tests|bin|branding|vendor|node_modules|\.github|\.git)\/|phpcs\.xml|phpunit\.xml|composer\.|package(-lock)?\.json|\.sh$/.test( f ) );
 	assert.deepStrictEqual( dev, [] );
 } );
+
+test( 'MeroDiet is described accurately: no appointment claims in the theme description, readme or notice, and install errors are shown', () => {
+	[ 'style.css', 'readme.txt', 'inc/class-nutri-care-plugin-notice.php' ].forEach( ( f ) =>
+		assert.doesNotMatch( read( f ), /appointment/i, `${ f } claims appointments` )
+	);
+	assert.match( read( 'assets/js/notice.js' ), /errorMessage/ );
+	assert.ok( fs.existsSync( path.join( root, 'assets/css/notice.css' ) ), 'notice.css missing' );
+} );

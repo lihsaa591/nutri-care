@@ -14,9 +14,14 @@
 				success: function () {
 					window.location.href = install.getAttribute( 'data-activate-url' );
 				},
-				error: function () {
+				error: function ( response ) {
+					var message = notice.querySelector( '.nutri-care-notice__error' );
 					install.disabled = false;
 					install.textContent = install.getAttribute( 'data-label' );
+					if ( message ) {
+						message.textContent = ( response && response.errorMessage ) || '';
+						message.hidden = ! message.textContent;
+					}
 				},
 			} );
 		} );

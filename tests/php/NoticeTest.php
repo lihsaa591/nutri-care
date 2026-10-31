@@ -14,7 +14,6 @@ class NoticeTest extends TestCase {
 		Functions\when( 'wp_nonce_url' )->alias( fn( $u, $a ) => $u . '&_wpnonce=nonce-' . $a );
 		Functions\when( 'get_current_user_id' )->justReturn( 7 );
 		Functions\when( 'get_theme_file_uri' )->alias( fn( $p ) => 'https://example.test/' . $p );
-		Functions\expect( 'wp_enqueue_script' )->zeroOrMoreTimes();
 	}
 
 	protected function tearDown(): void {
@@ -87,6 +86,34 @@ class NoticeTest extends TestCase {
 		ob_start();
 		( new Nutri_Care_Plugin_Notice() )->render();
 		$this->assertSame( '', ob_get_clean() );
+	}
+
+	public function test_notice_lists_real_meroditet_features_and_never_claims_appointments(): void {
+		$this->show_context( array() );
+		ob_start();
+		( new Nutri_Care_Plugin_Notice() )->render();
+		$out = ob_get_clean();
+		$this->assertStringContainsString( 'Meal plans', $out );
+		$this->assertStringContainsString( 'Client portal', $out );
+		$this->assertStringContainsString( 'Progress dashboard', $out );
+		$this->assertStringNotContainsStringIgnoringCase( 'appointment', $out );
+		$this->assertStringContainsString( 'nutri-care-notice__icon', $out );
+	}
+
+	public function test_assets_are_enqueued_only_when_the_notice_will_show(): void {
+		$this->show_context( array() );
+		Functions\when( 'wp_enqueue_style' )->justReturn( true );
+		Functions\expect( 'wp_enqueue_script' )->atLeast()->once();
+		( new Nutri_Care_Plugin_Notice() )->enqueue_assets();
+		$this->assertTrue( true );
+	}
+
+	public function test_assets_are_not_enqueued_for_users_who_cannot_install(): void {
+		$this->show_context( array(), false );
+		Functions\expect( 'wp_enqueue_style' )->never();
+		Functions\expect( 'wp_enqueue_script' )->never();
+		( new Nutri_Care_Plugin_Notice() )->enqueue_assets();
+		$this->assertTrue( true );
 	}
 
 	public function test_handle_dismiss_rejects_bad_nonce(): void {
