@@ -169,3 +169,10 @@ test( 'header and footer use the replaceable Site Logo block, with a palette-awa
 	assert.match( fn, /inc\/logo\.php/ );
 	assert.match( fn, /add_filter\(\s*'render_block_core\/site-logo',\s*'nutri_care_site_logo_fallback'/ );
 } );
+
+test( 'screenshot.png is 1200x900 and the services heading has space above the first row', () => {
+	const buf = fs.readFileSync( path.join( root, 'screenshot.png' ) );
+	assert.strictEqual( buf.readUInt32BE( 16 ), 1200 );
+	assert.strictEqual( buf.readUInt32BE( 20 ), 900 );
+	assert.match( read( 'style.css' ), /\.wp-block-heading \+ \.wp-block-group\.nc-svc\s*\{[^}]*margin-block-start:\s*1\.75rem/ );
+} );

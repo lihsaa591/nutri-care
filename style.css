@@ -479,3 +479,7 @@ p {
 .has-deep-background-color .nc-mark__vein {
 	stroke: var(--wp--preset--color--deep);
 }
+
+.wp-block-heading + .wp-block-group.nc-svc {
+	margin-block-start: 1.75rem;
+}
