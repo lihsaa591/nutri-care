@@ -221,3 +221,14 @@ test( 'author details point at the WordPress.org profile', () => {
 	assert.match( readme, /^Contributors: lihsaa$/m );
 	assert.match( readme, /\(C\) 2026 Aashil Bijukshe/ );
 } );
+
+test( 'languages/nutri-care.pot exists and carries the theme strings', () => {
+	const pot = read( 'languages/nutri-care.pot' );
+	assert.match( pot, /Project-Id-Version: Nutri Care 1\.0\.0/ );
+	assert.match( pot, /X-Domain: nutri-care/ );
+	[ 'Evidence-based care, explained clearly.', 'Request appointment', 'Nutri Care pairs well with MeroDiet', 'Meal plans', 'Nutri Care' ].forEach( ( s ) =>
+		assert.ok( pot.includes( `msgid "${ s }"` ), `pot lacks "${ s }"` )
+	);
+	assert.match( read( 'style.css' ), /^Domain Path: \/languages$/m );
+	assert.match( read( 'package.json' ), /"make-pot"/ );
+} );

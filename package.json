@@ -5,6 +5,7 @@
 	"description": "Nutri Care block theme",
 	"license": "GPL-2.0-or-later",
 	"scripts": {
-		"test": "node --test tests/*.test.js"
+		"test": "node --test tests/*.test.js",
+		"make-pot": "wp i18n make-pot . languages/nutri-care.pot --slug=nutri-care --domain=nutri-care --exclude=vendor,node_modules,tests,dist,branding,bin,.git,.github,docs,screenshot.png"
 	}
 }
