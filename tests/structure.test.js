@@ -80,3 +80,20 @@ test( 'functions.php loads the plugin notice only in the admin', () => {
 	assert.match( src, /inc\/class-nutri-care-plugin-notice\.php/ );
 	assert.match( src, /is_admin\(\)[\s\S]*Nutri_Care_Plugin_Notice\(\)\s*\)->register\(\)/ );
 } );
+
+test( 'footer has four columns and no invalid paragraph align', () => {
+	const html = read( 'parts/footer.html' );
+	assert.strictEqual( ( html.match( /<!-- wp:column[ -]/g ) || [] ).length, 4 );
+	assert.doesNotMatch( html, /wp:paragraph \{[^}]*"align"/ );
+} );
+
+test( 'search empty state says no results and offers a new search', () => {
+	const html = read( 'templates/search.html' );
+	const empty = html.slice( html.indexOf( 'wp:query-no-results' ) );
+	assert.match( empty, /No results/i );
+	assert.match( empty, /wp:search/ );
+} );
+
+test( 'posts index has a level 1 heading', () => {
+	assert.match( read( 'templates/index.html' ), /wp:heading \{"level":1/ );
+} );

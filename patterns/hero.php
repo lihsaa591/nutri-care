@@ -51,7 +51,7 @@
 </g>
 </svg>
 <p class="nc-plate__label nc-plate__label--grains"><strong>25%</strong> <?php esc_html_e( 'Whole grains', 'nutri-care' ); ?></p>
-<p class="nc-plate__label nc-plate__label--veg"><strong>50%</strong> <?php esc_html_e( 'Vegetables &amp; fruit', 'nutri-care' ); ?></p>
+<p class="nc-plate__label nc-plate__label--veg"><strong>50%</strong> <?php esc_html_e( 'Vegetables & fruit', 'nutri-care' ); ?></p>
 <p class="nc-plate__label nc-plate__label--protein"><strong>25%</strong> <?php esc_html_e( 'Lean protein', 'nutri-care' ); ?></p>
 <p class="nc-plate__caption"><?php esc_html_e( 'A balanced plate, simplified', 'nutri-care' ); ?></p>
 </div>

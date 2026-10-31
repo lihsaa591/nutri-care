@@ -138,8 +138,9 @@ Tags: block-patterns, full-site-editing, blog, one-column, custom-colors, wide-b
 }
 
 /* Services */
-.nc-svc {
+.wp-block-group.nc-svc {
 	align-items: baseline;
+	flex-wrap: nowrap;
 	border-top: 1px solid #d5e4e7;
 	gap: 1.5rem;
 	padding: 1.4rem 0;
@@ -274,7 +275,7 @@ Tags: block-patterns, full-site-editing, blog, one-column, custom-colors, wide-b
 
 /* Mobile */
 @media (max-width: 600px) {
-	.nc-svc {
+	.wp-block-group.nc-svc {
 		flex-wrap: wrap;
 	}
 
@@ -290,4 +291,22 @@ Tags: block-patterns, full-site-editing, blog, one-column, custom-colors, wide-b
 	.nc-plate__label strong {
 		font-size: 1rem;
 	}
+}
+
+.nc-footer-heading {
+	color: #9fd3dd;
+	font-weight: 600;
+	letter-spacing: 0.12em;
+	margin-bottom: 0.5rem;
+	text-transform: uppercase;
+}
+
+:where(a, summary, button):focus-visible {
+	outline: 3px solid var(--wp--preset--color--accent);
+	outline-offset: 2px;
+}
+
+.has-deep-background-color :where(a, button):focus-visible,
+.nc-band :where(a, button):focus-visible {
+	outline-color: var(--wp--preset--color--base);
 }

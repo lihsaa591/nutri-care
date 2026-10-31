@@ -81,6 +81,14 @@ class NoticeTest extends TestCase {
 		$this->assertStringContainsString( 'plugin=merodiet/merodiet.php', $out );
 	}
 
+	public function test_render_outputs_nothing_when_user_cannot_activate_plugins(): void {
+		$this->show_context( array() );
+		Functions\when( 'current_user_can' )->alias( fn( $cap ) => 'install_plugins' === $cap );
+		ob_start();
+		( new Nutri_Care_Plugin_Notice() )->render();
+		$this->assertSame( '', ob_get_clean() );
+	}
+
 	public function test_handle_dismiss_rejects_bad_nonce(): void {
 		$_GET['_wpnonce'] = 'bad';
 		Functions\when( 'sanitize_text_field' )->returnArg();

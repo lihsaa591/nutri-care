@@ -60,7 +60,7 @@ class Nutri_Care_Plugin_Notice {
 		$active    = $installed && is_plugin_active( self::PLUGIN_FILE );
 		$dismissed = (bool) get_user_meta( get_current_user_id(), self::META_KEY, true );
 
-		if ( ! self::should_display( current_user_can( 'install_plugins' ), $active, $dismissed ) ) {
+		if ( ! self::should_display( current_user_can( 'install_plugins' ) && current_user_can( 'activate_plugins' ), $active, $dismissed ) ) {
 			return;
 		}
 

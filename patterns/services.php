@@ -15,7 +15,7 @@
 <h2 class="wp-block-heading"><?php esc_html_e( 'Care that meets you where you are', 'nutri-care' ); ?></h2>
 <!-- /wp:heading -->
 
-<!-- wp:group {"align":"wide","className":"nc-svc","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<!-- wp:group {"align":"wide","className":"nc-svc","layout":{"type":"flex"}} -->
 <div class="wp-block-group alignwide nc-svc"><!-- wp:paragraph {"className":"nc-svc__no"} -->
 <p class="nc-svc__no">01</p>
 <!-- /wp:paragraph -->
@@ -27,7 +27,7 @@
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"align":"wide","className":"nc-svc","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<!-- wp:group {"align":"wide","className":"nc-svc","layout":{"type":"flex"}} -->
 <div class="wp-block-group alignwide nc-svc"><!-- wp:paragraph {"className":"nc-svc__no"} -->
 <p class="nc-svc__no">02</p>
 <!-- /wp:paragraph -->
@@ -39,7 +39,7 @@
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"align":"wide","className":"nc-svc","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<!-- wp:group {"align":"wide","className":"nc-svc","layout":{"type":"flex"}} -->
 <div class="wp-block-group alignwide nc-svc"><!-- wp:paragraph {"className":"nc-svc__no"} -->
 <p class="nc-svc__no">03</p>
 <!-- /wp:paragraph -->
@@ -51,7 +51,7 @@
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"align":"wide","className":"nc-svc","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<!-- wp:group {"align":"wide","className":"nc-svc","layout":{"type":"flex"}} -->
 <div class="wp-block-group alignwide nc-svc"><!-- wp:paragraph {"className":"nc-svc__no"} -->
 <p class="nc-svc__no">04</p>
 <!-- /wp:paragraph -->

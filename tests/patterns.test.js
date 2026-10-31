@@ -98,3 +98,13 @@ test( 'every bundled image is used and credited in readme.txt', () => {
 		assert.match( readme, /CC0/ );
 	} );
 } );
+
+test( 'translatable strings contain no HTML entities', () => {
+	names.forEach( ( n ) =>
+		assert.doesNotMatch( read( n ), /esc_(html|attr)_e\(\s*'[^']*&amp;/, `${ n } double-escapes an entity` )
+	);
+} );
+
+test( 'services rows do not force nowrap in block markup', () => {
+	assert.doesNotMatch( read( 'services' ), /"flexWrap":"nowrap"/ );
+} );
