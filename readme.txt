@@ -62,3 +62,9 @@ https://commons.wikimedia.org/wiki/File:Salad_greens_and_vegetables_-_Cambridge,
 Fruit Platter by Cecilia Par famla_fint.
 fruit-platter.webp
 https://commons.wikimedia.org/wiki/File:Fruit_Platter_(Unsplash).jpg
+
+= Fonts =
+
+Fraunces by Undercase Type and DM Sans by Colophon Foundry, both licensed under the SIL Open Font License 1.1 (https://openfontlicense.org). Bundled as local woff2 files in assets/fonts/.
+Fraunces: https://github.com/undercasetype/Fraunces
+DM Sans: https://github.com/googlefonts/dm-fonts

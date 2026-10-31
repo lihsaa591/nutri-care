@@ -364,3 +364,12 @@ Tags: block-patterns, full-site-editing, blog, one-column, custom-colors, wide-b
 	object-fit: cover;
 	width: 100%;
 }
+
+/* Display numbers and quotes use the heading font */
+.nc-quote,
+.nc-plan__price,
+.nc-stat strong,
+.nc-step__no,
+.nc-plate__label strong {
+	font-family: var(--wp--preset--font-family--fraunces);
+}
