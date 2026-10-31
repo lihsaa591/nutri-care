@@ -14,6 +14,7 @@ class NoticeTest extends TestCase {
 		Functions\when( 'wp_nonce_url' )->alias( fn( $u, $a ) => $u . '&_wpnonce=nonce-' . $a );
 		Functions\when( 'get_current_user_id' )->justReturn( 7 );
 		Functions\when( 'get_theme_file_uri' )->alias( fn( $p ) => 'https://example.test/' . $p );
+		Functions\when( 'get_theme_file_path' )->alias( fn( $p ) => dirname( __DIR__, 2 ) . '/' . $p );
 	}
 
 	protected function tearDown(): void {
@@ -106,6 +107,19 @@ class NoticeTest extends TestCase {
 		$this->show_context( array() );
 		Functions\when( 'wp_enqueue_style' )->justReturn( true );
 		Functions\expect( 'wp_enqueue_script' )->atLeast()->once();
+		( new Nutri_Care_Plugin_Notice() )->enqueue_assets();
+		$this->assertTrue( true );
+	}
+
+	public function test_asset_versions_follow_the_file_modification_time_so_updates_bust_the_cache(): void {
+		$this->show_context( array() );
+		$root = dirname( __DIR__, 2 );
+		Functions\when( 'get_theme_file_path' )->alias( fn( $p ) => $root . '/' . $p );
+		$css_version = (string) filemtime( $root . '/assets/css/notice.css' );
+		$js_version  = (string) filemtime( $root . '/assets/js/notice.js' );
+		Functions\expect( 'wp_enqueue_style' )->once()->with( 'nutri-care-notice', \Mockery::any(), array(), $css_version );
+		Functions\expect( 'wp_enqueue_script' )->with( 'nutri-care-notice', \Mockery::any(), array( 'updates' ), $js_version, true )->once();
+		Functions\expect( 'wp_enqueue_script' )->with( 'updates' )->zeroOrMoreTimes();
 		( new Nutri_Care_Plugin_Notice() )->enqueue_assets();
 		$this->assertTrue( true );
 	}

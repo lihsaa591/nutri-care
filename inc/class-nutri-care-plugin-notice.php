@@ -82,9 +82,21 @@ class Nutri_Care_Plugin_Notice {
 			return;
 		}
 
-		wp_enqueue_style( 'nutri-care-notice', get_theme_file_uri( 'assets/css/notice.css' ), array(), self::VERSION );
+		wp_enqueue_style( 'nutri-care-notice', get_theme_file_uri( 'assets/css/notice.css' ), array(), $this->asset_version( 'assets/css/notice.css' ) );
 		wp_enqueue_script( 'updates' );
-		wp_enqueue_script( 'nutri-care-notice', get_theme_file_uri( 'assets/js/notice.js' ), array( 'updates' ), self::VERSION, true );
+		wp_enqueue_script( 'nutri-care-notice', get_theme_file_uri( 'assets/js/notice.js' ), array( 'updates' ), $this->asset_version( 'assets/js/notice.js' ), true );
+	}
+
+	/**
+	 * Version string for an asset: its modification time, so edits bust the cache.
+	 *
+	 * @param string $relative_path Path relative to the theme root.
+	 * @return string
+	 */
+	private function asset_version( $relative_path ) {
+		$file = get_theme_file_path( $relative_path );
+
+		return file_exists( $file ) ? (string) filemtime( $file ) : self::VERSION;
 	}
 
 	/**
