@@ -439,3 +439,43 @@ p {
 	position: absolute !important;
 	width: 100% !important;
 }
+
+/* Logo mark: recolours with the palette */
+.nc-mark {
+	flex: none;
+}
+
+.nc-mark__a {
+	stroke: var(--wp--preset--color--accent);
+}
+
+.nc-mark__c {
+	stroke: var(--wp--preset--color--contrast);
+}
+
+.nc-mark__t {
+	stroke: var(--wp--preset--color--tint);
+}
+
+.nc-mark__leaf {
+	fill: var(--wp--preset--color--accent);
+}
+
+.nc-mark__vein {
+	fill: none;
+	stroke: var(--wp--preset--color--base);
+	stroke-linecap: round;
+	stroke-width: 1.6;
+}
+
+.has-deep-background-color .nc-mark__c {
+	stroke: var(--wp--preset--color--base);
+}
+
+.has-deep-background-color .nc-mark__leaf {
+	fill: var(--wp--preset--color--tint);
+}
+
+.has-deep-background-color .nc-mark__vein {
+	stroke: var(--wp--preset--color--deep);
+}

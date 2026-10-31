@@ -153,3 +153,15 @@ test( 'plate children are positioned with selectors strong enough to beat the ed
 	assert.match( css, /\.nc-plate \.nc-plate__label\s*\{[^}]*position:\s*absolute/ );
 	assert.match( css, /\.nc-plate \.nc-plate__caption\s*\{[^}]*position:\s*absolute/ );
 } );
+
+test( 'logo mark is in the header and footer, decorative, and recolours with the palette', () => {
+	[ 'parts/header.html', 'parts/footer.html' ].forEach( ( f ) => {
+		const html = read( f );
+		assert.match( html, /<!-- wp:html -->[\s\S]*<svg class="nc-mark"[^>]*aria-hidden="true"[\s\S]*<!-- \/wp:html -->/, `${ f } lacks the mark` );
+	} );
+	const css = read( 'style.css' );
+	[ 'nc-mark__a', 'nc-mark__c', 'nc-mark__t', 'nc-mark__leaf', 'nc-mark__vein' ].forEach( ( c ) =>
+		assert.match( css, new RegExp( `\\.${ c }\\s*\\{` ), `${ c } style missing` )
+	);
+	assert.match( css, /\.nc-mark__a\s*\{[^}]*var\(--wp--preset--color--accent\)/ );
+} );
