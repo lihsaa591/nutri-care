@@ -55,9 +55,10 @@ Healthy Breakfast by Federica Diliberto (federyka).
 plate-bowl.webp
 https://commons.wikimedia.org/wiki/File:Healthy_Breakfast_(Unsplash).jpg
 
-Vegetables on Cutting Board by F. D. Neal.
-prep-board.webp
-https://commons.wikimedia.org/wiki/File:Vegetables_on_Cutting_Board.jpg
+Female doctor by Direct Media, via StockSnap (CC0).
+doctor-portrait.webp
+https://commons.wikimedia.org/wiki/File:Female_doctor.jpg
+https://stocksnap.io/photo/female-doctor-WINC1QDMT4
 
 Fruit Platter by Cecilia Par famla_fint.
 fruit-platter.webp

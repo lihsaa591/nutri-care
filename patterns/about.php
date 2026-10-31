@@ -10,7 +10,7 @@
 <div id="about" class="wp-block-group alignfull has-soft-background-color has-background nc-about" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:columns {"align":"wide","verticalAlignment":"center"} -->
 <div class="wp-block-columns alignwide are-vertically-aligned-center"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/prep-board.webp" alt="<?php esc_attr_e( 'Colourful chopped vegetables on a cutting board', 'nutri-care' ); ?>"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/doctor-portrait.webp" alt="<?php esc_attr_e( 'A smiling healthcare professional in a white coat holding a tablet', 'nutri-care' ); ?>"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 

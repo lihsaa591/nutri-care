@@ -362,6 +362,7 @@ Tags: block-patterns, full-site-editing, blog, one-column, custom-colors, wide-b
 .nc-about .wp-block-image img {
 	min-height: 26rem;
 	object-fit: cover;
+	object-position: 50% 18%;
 	width: 100%;
 }
 
