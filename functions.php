@@ -21,3 +21,8 @@ function nutri_care_register_pattern_category() {
 	);
 }
 add_action( 'init', 'nutri_care_register_pattern_category' );
+
+if ( is_admin() ) {
+	require_once get_template_directory() . '/inc/class-nutri-care-plugin-notice.php';
+	( new Nutri_Care_Plugin_Notice() )->register();
+}

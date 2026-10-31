@@ -74,3 +74,9 @@ test( 'front-page composes the ten patterns in order', () => {
 		'contact',
 	] );
 } );
+
+test( 'functions.php loads the plugin notice only in the admin', () => {
+	const src = read( 'functions.php' );
+	assert.match( src, /inc\/class-nutri-care-plugin-notice\.php/ );
+	assert.match( src, /is_admin\(\)[\s\S]*Nutri_Care_Plugin_Notice\(\)\s*\)->register\(\)/ );
+} );

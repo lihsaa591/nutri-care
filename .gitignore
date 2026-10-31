@@ -3,3 +3,4 @@ vendor/
 dist/
 .superpowers/
 .phpunit.result.cache
+.phpunit.cache/
