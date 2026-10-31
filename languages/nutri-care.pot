@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-31T10:13:49+00:00\n"
+"POT-Creation-Date: 2026-10-31T10:24:41+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: nutri-care\n"
@@ -190,14 +190,17 @@ msgid "Let’s talk"
 msgstr ""
 
 #: patterns/contact.php:21
+#: patterns/footer-columns.php:42
 msgid "hello@example.com"
 msgstr ""
 
 #: patterns/contact.php:21
+#: patterns/footer-columns.php:52
 msgid "Mon to Fri, 9am to 5pm"
 msgstr ""
 
 #: patterns/contact.php:21
+#: patterns/footer-columns.php:42
 msgid "Clinic address line, City"
 msgstr ""
 
@@ -259,6 +262,73 @@ msgstr ""
 msgid "Yes, including children and teens with a parent present."
 msgstr ""
 
+#: patterns/footer-columns.php
+msgctxt "Pattern title"
+msgid "Footer columns"
+msgstr ""
+
+#: patterns/footer-columns.php
+msgctxt "Pattern description"
+msgid "Brand, pages, contact and hours columns with the education disclaimer."
+msgstr ""
+
+#: patterns/footer-columns.php:22
+msgid "Pages"
+msgstr ""
+
+#: patterns/footer-columns.php:26
+#: patterns/header-nav.php:11
+msgid "Services"
+msgstr ""
+
+#: patterns/footer-columns.php:28
+#: patterns/header-nav.php:13
+msgid "About"
+msgstr ""
+
+#: patterns/footer-columns.php:30
+#: patterns/header-nav.php:15
+msgid "Plans"
+msgstr ""
+
+#: patterns/footer-columns.php:32
+#: patterns/header-nav.php:17
+#: patterns/journal-title.php:10
+msgid "Journal"
+msgstr ""
+
+#: patterns/footer-columns.php:38
+#: patterns/header-nav.php:19
+msgid "Contact"
+msgstr ""
+
+#: patterns/footer-columns.php:48
+msgid "Hours"
+msgstr ""
+
+#: patterns/footer-columns.php:52
+msgid "Online and in clinic"
+msgstr ""
+
+#: patterns/footer-columns.php:62
+msgid "Nutrition information on this site is for education and is not medical advice."
+msgstr ""
+
+#: patterns/header-nav.php
+msgctxt "Pattern title"
+msgid "Header navigation"
+msgstr ""
+
+#: patterns/header-nav.php
+msgctxt "Pattern description"
+msgid "Menu links and the Book a call button."
+msgstr ""
+
+#: patterns/header-nav.php:24
+#: patterns/process.php:25
+msgid "Book a call"
+msgstr ""
+
 #: patterns/hero.php
 msgctxt "Pattern title"
 msgid "Hero: balanced plate"
@@ -311,6 +381,54 @@ msgstr ""
 
 #: patterns/hero.php:58
 msgid "A balanced plate, simplified"
+msgstr ""
+
+#: patterns/journal-title.php
+msgctxt "Pattern title"
+msgid "Journal title"
+msgstr ""
+
+#: patterns/journal-title.php
+msgctxt "Pattern description"
+msgid "Page title for the posts index."
+msgstr ""
+
+#: patterns/no-posts.php
+msgctxt "Pattern title"
+msgid "No posts yet"
+msgstr ""
+
+#: patterns/no-posts.php
+msgctxt "Pattern description"
+msgid "Message shown when a list has no posts."
+msgstr ""
+
+#: patterns/no-posts.php:10
+msgid "Nothing to show here yet. Please check back soon."
+msgstr ""
+
+#: patterns/not-found.php
+msgctxt "Pattern title"
+msgid "Page not found"
+msgstr ""
+
+#: patterns/not-found.php
+msgctxt "Pattern description"
+msgid "Heading, message and search for the 404 page."
+msgstr ""
+
+#: patterns/not-found.php:10
+msgid "Page not found"
+msgstr ""
+
+#: patterns/not-found.php:14
+msgid "We couldn’t find the page you were looking for. Try searching, or head back to the homepage."
+msgstr ""
+
+#: patterns/not-found.php:17
+#: patterns/search-empty.php:13
+#: patterns/search-form.php:9
+msgid "Search"
 msgstr ""
 
 #: patterns/pricing.php
@@ -419,10 +537,6 @@ msgstr ""
 msgid "How it works"
 msgstr ""
 
-#: patterns/process.php:25
-msgid "Book a call"
-msgstr ""
-
 #: patterns/process.php:29
 msgid "Tell me about your goals and history."
 msgstr ""
@@ -441,6 +555,30 @@ msgstr ""
 
 #: patterns/process.php:57
 msgid "Follow-ups and adjustments as you go."
+msgstr ""
+
+#: patterns/search-empty.php
+msgctxt "Pattern title"
+msgid "No search results"
+msgstr ""
+
+#: patterns/search-empty.php
+msgctxt "Pattern description"
+msgid "Message and a new search when a search finds nothing."
+msgstr ""
+
+#: patterns/search-empty.php:10
+msgid "No results found. Try a different search."
+msgstr ""
+
+#: patterns/search-form.php
+msgctxt "Pattern title"
+msgid "Search form"
+msgstr ""
+
+#: patterns/search-form.php
+msgctxt "Pattern description"
+msgid "Wide search form shown above search results."
 msgstr ""
 
 #: patterns/services.php

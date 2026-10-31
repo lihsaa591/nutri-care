@@ -4,7 +4,18 @@ const fs = require( 'node:fs' );
 const path = require( 'node:path' );
 
 const root = path.join( __dirname, '..' );
-const read = ( f ) => fs.readFileSync( path.join( root, f ), 'utf8' );
+const rawRead = ( f ) => fs.readFileSync( path.join( root, f ), 'utf8' );
+
+// Templates and parts may pull text in from hidden patterns; tests see the combined markup.
+const expand = ( html ) =>
+	html
+		.replace( /<!-- wp:pattern \{"slug":"nutri-care\/([a-z-]+)"\} \/-->/g, ( m, name ) =>
+			rawRead( `patterns/${ name }.php` ).replace( /^<\?php[\s\S]*?\?>\n/, '' )
+		)
+		.replace( /<\?php esc_html_e\( '(.+?)', 'nutri-care' \); \?>/g, '$1' )
+		.replace( /<\?php echo esc_attr__\( '(.+?)', 'nutri-care' \); \?>/g, '$1' );
+
+const read = ( f ) => ( f.endsWith( '.html' ) ? expand( rawRead( f ) ) : rawRead( f ) );
 
 const templates = [ 'index', 'front-page', 'page', 'single', 'archive', 'search', '404' ].map(
 	( n ) => `templates/${ n }.html`
@@ -59,7 +70,7 @@ test( 'templates use header and footer parts', () => {
 } );
 
 test( 'front-page composes the ten patterns in order', () => {
-	const html = read( 'templates/front-page.html' );
+	const html = rawRead( 'templates/front-page.html' );
 	const slugs = [ ...html.matchAll( /wp:pattern \{"slug":"nutri-care\/([a-z-]+)"/g ) ].map( ( m ) => m[ 1 ] );
 	assert.deepStrictEqual( slugs, [
 		'hero',
@@ -130,7 +141,7 @@ test( 'full-width sections get side gutters, except the front-page wrapper', () 
 	assert.match( css, /\.wp-block-group\.alignfull\s*\{[^}]*padding-inline:\s*var\(--nc-gutter\)/ );
 	assert.match( css, /--nc-gutter:\s*clamp\(/ );
 	assert.match( css, /\.nc-flush\s*\{[^}]*padding-inline:\s*0/ );
-	assert.match( read( 'templates/front-page.html' ), /"className":"nc-flush"[\s\S]*<main class="wp-block-group alignfull nc-flush">/ );
+	assert.match( rawRead( 'templates/front-page.html' ), /"className":"nc-flush"[\s\S]*<main class="wp-block-group alignfull nc-flush">/ );
 } );
 
 test( 'mobile menu overlay has theme colours and its own padding', () => {
@@ -226,9 +237,19 @@ test( 'languages/nutri-care.pot exists and carries the theme strings', () => {
 	const pot = read( 'languages/nutri-care.pot' );
 	assert.match( pot, /Project-Id-Version: Nutri Care 1\.0\.0/ );
 	assert.match( pot, /X-Domain: nutri-care/ );
-	[ 'Evidence-based care, explained clearly.', 'Request appointment', 'Nutri Care pairs well with MeroDiet', 'Meal plans', 'Nutri Care' ].forEach( ( s ) =>
+	[ 'Evidence-based care, explained clearly.', 'Request appointment', 'Nutri Care pairs well with MeroDiet', 'Meal plans', 'Nutri Care', 'Page not found', 'Book a call', 'Journal', 'No results found. Try a different search.', 'Pages', 'Hours' ].forEach( ( s ) =>
 		assert.ok( pot.includes( `msgid "${ s }"` ), `pot lacks "${ s }"` )
 	);
 	assert.match( read( 'style.css' ), /^Domain Path: \/languages$/m );
 	assert.match( read( 'package.json' ), /"make-pot"/ );
+} );
+
+test( 'templates and parts hard-code no visible English or block label attributes', () => {
+	const files = [ ...fs.readdirSync( path.join( root, 'templates' ) ).map( ( f ) => `templates/${ f }` ), ...fs.readdirSync( path.join( root, 'parts' ) ).map( ( f ) => `parts/${ f }` ) ];
+	files.forEach( ( f ) => {
+		const src = rawRead( f );
+		const text = src.replace( /<!--[\s\S]*?-->/g, ' ' ).replace( /<svg[\s\S]*?<\/svg>/g, ' ' ).replace( /<[^>]+>/g, ' ' ).replace( /[^A-Za-z]+/g, ' ' ).trim();
+		assert.strictEqual( text, '', `${ f } has untranslatable text: ${ text.slice( 0, 60 ) }` );
+		assert.doesNotMatch( src, /"(label|buttonText)":"/, `${ f } hard-codes a block label` );
+	} );
 } );

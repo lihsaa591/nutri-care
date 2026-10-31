@@ -116,3 +116,18 @@ test( 'hero plate photo and labels are editable blocks, not raw HTML', () => {
 	assert.strictEqual( ( src.match( /<!-- wp:paragraph \{"className":"nc-plate__label/g ) || [] ).length, 3 );
 	assert.match( src, /<!-- wp:paragraph \{"className":"nc-plate__caption"\}/ );
 } );
+
+const hidden = [ 'header-nav', 'footer-columns', 'not-found', 'no-posts', 'search-empty', 'search-form', 'journal-title' ];
+
+test( 'hidden text patterns exist, stay out of the inserter, and are fully translatable', () => {
+	hidden.forEach( ( n ) => {
+		const file = path.join( root, 'patterns', `${ n }.php` );
+		assert.ok( fs.existsSync( file ), `${ n } missing` );
+		const src = fs.readFileSync( file, 'utf8' );
+		assert.match( src, new RegExp( `\\* Slug: nutri-care/${ n }\\b` ) );
+		assert.match( src, /\* Inserter: no\b/ );
+		const leftover = visibleText( src ).replace( /[\s\d%$+→·×©.,:;!?'"()/&@-]+/g, ' ' ).trim();
+		assert.strictEqual( leftover, '', `${ n } has untranslated text: ${ leftover.slice( 0, 60 ) }` );
+		assert.doesNotMatch( src, /"(label|buttonText)":"(?!<\?php)/, `${ n } hard-codes a block label` );
+	} );
+} );
