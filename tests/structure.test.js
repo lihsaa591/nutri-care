@@ -124,3 +124,11 @@ test( 'every default menu target exists as an anchor in the patterns', () => {
 		assert.match( patterns, new RegExp( `id="${ id }"` ), `#${ id } anchor missing` )
 	);
 } );
+
+test( 'full-width sections get side gutters, except the front-page wrapper', () => {
+	const css = read( 'style.css' );
+	assert.match( css, /\.wp-block-group\.alignfull\s*\{[^}]*padding-inline:\s*var\(--nc-gutter\)/ );
+	assert.match( css, /--nc-gutter:\s*clamp\(/ );
+	assert.match( css, /\.nc-flush\s*\{[^}]*padding-inline:\s*0/ );
+	assert.match( read( 'templates/front-page.html' ), /"className":"nc-flush"[\s\S]*<main class="wp-block-group alignfull nc-flush">/ );
+} );

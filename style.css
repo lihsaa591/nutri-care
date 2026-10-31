@@ -394,3 +394,16 @@ h3 {
 p {
 	text-wrap: pretty;
 }
+
+/* Side gutters for full-width sections (patterns add their own, so the front-page wrapper is flush) */
+:root {
+	--nc-gutter: clamp(1rem, 5vw, 2rem);
+}
+
+.wp-block-group.alignfull {
+	padding-inline: var(--nc-gutter);
+}
+
+.wp-block-group.alignfull.nc-flush {
+	padding-inline: 0;
+}
