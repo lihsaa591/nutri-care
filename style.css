@@ -29,7 +29,7 @@ Tags: block-patterns, full-site-editing, blog, one-column, custom-colors, wide-b
 }
 
 .nc-display {
-	font-size: clamp(2.25rem, 1.2rem + 3.2vw, 3.75rem);
+	font-size: clamp(2rem, 1rem + 2.7vw, 3.25rem);
 	letter-spacing: -0.03em;
 	line-height: 1.02;
 	margin-top: 1rem;
@@ -82,7 +82,7 @@ Tags: block-patterns, full-site-editing, blog, one-column, custom-colors, wide-b
 
 .nc-plate {
 	aspect-ratio: 1;
-	background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 0 94%, transparent 94%);
+	background: radial-gradient(circle closest-side, rgba(255, 255, 255, 0.7) 94%, transparent 94.5%);
 	margin: 0 auto 2rem;
 	max-width: 540px;
 	position: relative;
