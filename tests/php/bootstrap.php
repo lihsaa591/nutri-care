@@ -10,3 +10,4 @@ if ( ! defined( 'WP_PLUGIN_DIR' ) ) {
 }
 
 require_once dirname( __DIR__, 2 ) . '/inc/class-nutri-care-plugin-notice.php';
+require_once dirname( __DIR__, 2 ) . '/inc/logo.php';

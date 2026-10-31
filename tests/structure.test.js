@@ -154,14 +154,18 @@ test( 'plate children are positioned with selectors strong enough to beat the ed
 	assert.match( css, /\.nc-plate \.nc-plate__caption\s*\{[^}]*position:\s*absolute/ );
 } );
 
-test( 'logo mark is in the header and footer, decorative, and recolours with the palette', () => {
+test( 'header and footer use the replaceable Site Logo block, with a palette-aware default mark', () => {
 	[ 'parts/header.html', 'parts/footer.html' ].forEach( ( f ) => {
 		const html = read( f );
-		assert.match( html, /<!-- wp:html -->[\s\S]*<svg class="nc-mark"[^>]*aria-hidden="true"[\s\S]*<!-- \/wp:html -->/, `${ f } lacks the mark` );
+		assert.match( html, /<!-- wp:site-logo \{[^}]*"width":36[^}]*\} \/-->/, `${ f } lacks the site logo block` );
+		assert.doesNotMatch( html, /<svg/, `${ f } still hard-codes the svg` );
 	} );
 	const css = read( 'style.css' );
 	[ 'nc-mark__a', 'nc-mark__c', 'nc-mark__t', 'nc-mark__leaf', 'nc-mark__vein' ].forEach( ( c ) =>
 		assert.match( css, new RegExp( `\\.${ c }\\s*\\{` ), `${ c } style missing` )
 	);
 	assert.match( css, /\.nc-mark__a\s*\{[^}]*var\(--wp--preset--color--accent\)/ );
+	const fn = read( 'functions.php' );
+	assert.match( fn, /inc\/logo\.php/ );
+	assert.match( fn, /add_filter\(\s*'render_block_core\/site-logo',\s*'nutri_care_site_logo_fallback'/ );
 } );

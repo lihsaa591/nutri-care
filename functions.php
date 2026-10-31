@@ -44,6 +44,9 @@ function nutri_care_editor_styles() {
 }
 add_action( 'after_setup_theme', 'nutri_care_editor_styles' );
 
+require_once get_template_directory() . '/inc/logo.php';
+add_filter( 'render_block_core/site-logo', 'nutri_care_site_logo_fallback' );
+
 if ( is_admin() ) {
 	require_once get_template_directory() . '/inc/class-nutri-care-plugin-notice.php';
 	( new Nutri_Care_Plugin_Notice() )->register();
