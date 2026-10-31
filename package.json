@@ -5,6 +5,6 @@
 	"description": "Nutri Care block theme",
 	"license": "GPL-2.0-or-later",
 	"scripts": {
-		"test": "node --test tests/"
+		"test": "node --test tests/*.test.js"
 	}
 }
