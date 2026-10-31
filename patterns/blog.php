@@ -6,8 +6,8 @@
  * Description: Three latest posts in a grid.
  */
 ?>
-<!-- wp:group {"align":"full","className":"nc-section","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"layout":{"type":"constrained","wideSize":"1120px"}} -->
-<div class="wp-block-group alignfull nc-section" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:paragraph {"className":"nc-eyebrow"} -->
+<!-- wp:group {"anchor":"journal","align":"full","className":"nc-section","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"layout":{"type":"constrained","wideSize":"1120px"}} -->
+<div id="journal" class="wp-block-group alignfull nc-section" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:paragraph {"className":"nc-eyebrow"} -->
 <p class="nc-eyebrow"><?php esc_html_e( '07 — Journal', 'nutri-care' ); ?></p>
 <!-- /wp:paragraph -->
 

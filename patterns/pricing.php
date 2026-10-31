@@ -6,8 +6,8 @@
  * Description: Three plan columns, the middle one highlighted.
  */
 ?>
-<!-- wp:group {"align":"full","backgroundColor":"soft","className":"nc-pricing","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"layout":{"type":"constrained","wideSize":"1120px"}} -->
-<div class="wp-block-group alignfull has-soft-background-color has-background nc-pricing" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:paragraph {"className":"nc-eyebrow"} -->
+<!-- wp:group {"anchor":"pricing","align":"full","backgroundColor":"soft","className":"nc-pricing","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"layout":{"type":"constrained","wideSize":"1120px"}} -->
+<div id="pricing" class="wp-block-group alignfull has-soft-background-color has-background nc-pricing" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:paragraph {"className":"nc-eyebrow"} -->
 <p class="nc-eyebrow"><?php esc_html_e( '04 — Plans', 'nutri-care' ); ?></p>
 <!-- /wp:paragraph -->
 

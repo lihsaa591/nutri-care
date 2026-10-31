@@ -104,3 +104,23 @@ test( 'functions.php enqueues style.css on the front end and in the editor', () 
 	assert.match( src, /add_action\(\s*'wp_enqueue_scripts',\s*'nutri_care_enqueue_styles'/ );
 	assert.match( src, /add_editor_style\(\s*'style\.css'/ );
 } );
+
+test( 'header ships the default menu links and a Book a call button', () => {
+	const html = read( 'parts/header.html' );
+	[ [ 'Services', 'services' ], [ 'About', 'about' ], [ 'Plans', 'pricing' ], [ 'Journal', 'journal' ], [ 'Contact', 'contact' ] ].forEach(
+		( [ label, id ] ) => {
+			assert.match( html, new RegExp( `wp:navigation-link \\{"label":"${ label }"[^}]*"url":"/#${ id }"` ), `${ label } link` );
+		}
+	);
+	assert.match( html, /wp-block-button__link[^>]*href="\/#contact"[^>]*>Book a call</ );
+} );
+
+test( 'every default menu target exists as an anchor in the patterns', () => {
+	const patterns = fs
+		.readdirSync( path.join( root, 'patterns' ) )
+		.map( ( f ) => fs.readFileSync( path.join( root, 'patterns', f ), 'utf8' ) )
+		.join( '\n' );
+	[ 'services', 'about', 'pricing', 'journal', 'contact' ].forEach( ( id ) =>
+		assert.match( patterns, new RegExp( `id="${ id }"` ), `#${ id } anchor missing` )
+	);
+} );
