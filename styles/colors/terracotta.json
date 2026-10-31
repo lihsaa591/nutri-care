@@ -1,0 +1,51 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Terracotta",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "contrast",
+					"color": "#3B2A22",
+					"name": "Terracotta deep"
+				},
+				{
+					"slug": "accent",
+					"color": "#AC4F28",
+					"name": "Terracotta"
+				},
+				{
+					"slug": "soft",
+					"color": "#FAF1EA",
+					"name": "Terracotta soft"
+				},
+				{
+					"slug": "base",
+					"color": "#FFFFFF",
+					"name": "White"
+				},
+				{
+					"slug": "muted",
+					"color": "#6B5448",
+					"name": "Slate"
+				},
+				{
+					"slug": "deep",
+					"color": "#261A15",
+					"name": "Terracotta night"
+				},
+				{
+					"slug": "tint",
+					"color": "#E3B79F",
+					"name": "Terracotta tint"
+				},
+				{
+					"slug": "line",
+					"color": "#EBDDD2",
+					"name": "Terracotta line"
+				}
+			]
+		}
+	}
+}

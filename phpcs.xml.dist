@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<ruleset name="Nutri Care">
+	<description>WordPress coding standards for Nutri Care.</description>
+	<file>.</file>
+	<exclude-pattern>/vendor/</exclude-pattern>
+	<exclude-pattern>/node_modules/</exclude-pattern>
+	<exclude-pattern>/dist/</exclude-pattern>
+	<exclude-pattern>/tests/</exclude-pattern>
+	<arg name="extensions" value="php"/>
+	<arg value="ps"/>
+	<config name="testVersion" value="7.4-"/>
+	<rule ref="WordPress"/>
+	<rule ref="PHPCompatibilityWP"/>
+	<config name="minimum_wp_version" value="6.6"/>
+	<rule ref="Squiz.Commenting.FileComment">
+		<exclude-pattern>/patterns/</exclude-pattern>
+	</rule>
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array"><element value="nutri-care"/></property>
+		</properties>
+	</rule>
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array"><element value="nutri_care"/><element value="Nutri_Care"/></property>
+		</properties>
+	</rule>
+</ruleset>

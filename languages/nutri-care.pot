@@ -1,0 +1,911 @@
+# Copyright (C) 2026 Aashil Bijukshe
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Nutri Care 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/nutri-care\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-31T10:24:41+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: nutri-care\n"
+
+#. Theme Name of the theme
+#: style.css
+#: functions.php:20
+msgid "Nutri Care"
+msgstr ""
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://github.com/lihsaa591/nutri-care"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "A minimal, editorial block theme for dietitians and nutritionists. Clean patterns for services, pricing, testimonials, FAQ, booking and a journal. Works well on its own, and pairs optionally with the MeroDiet plugin for meal plans, a client portal and progress tracking."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "Aashil Bijukshe"
+msgstr ""
+
+#. Author URI of the theme
+#: style.css
+msgid "https://profiles.wordpress.org/lihsaa/"
+msgstr ""
+
+#: inc/class-nutri-care-plugin-notice.php:122
+msgid "Nutri Care pairs well with MeroDiet"
+msgstr ""
+
+#: inc/class-nutri-care-plugin-notice.php:123
+msgid "An optional free plugin for dietitians: build meal plans, invite clients to their own portal, and follow their food logs from your WordPress dashboard."
+msgstr ""
+
+#: inc/class-nutri-care-plugin-notice.php:125
+#: patterns/pricing.php:100
+msgid "Meal plans"
+msgstr ""
+
+#: inc/class-nutri-care-plugin-notice.php:126
+msgid "Client portal"
+msgstr ""
+
+#: inc/class-nutri-care-plugin-notice.php:127
+msgid "Progress dashboard"
+msgstr ""
+
+#: inc/class-nutri-care-plugin-notice.php:131
+msgid "Activate MeroDiet"
+msgstr ""
+
+#: inc/class-nutri-care-plugin-notice.php:133
+msgid "Install MeroDiet"
+msgstr ""
+
+#: inc/class-nutri-care-plugin-notice.php:133
+msgid "Installing…"
+msgstr ""
+
+#: inc/class-nutri-care-plugin-notice.php:135
+msgid "Learn more"
+msgstr ""
+
+#: inc/class-nutri-care-plugin-notice.php:152
+msgid "The link you followed has expired."
+msgstr ""
+
+#: patterns/about.php
+msgctxt "Pattern title"
+msgid "About with stats"
+msgstr ""
+
+#: patterns/about.php
+msgctxt "Pattern description"
+msgid "Photo beside a short bio and three key numbers."
+msgstr ""
+
+#: patterns/about.php:13
+msgid "A smiling healthcare professional in a white coat holding a tablet"
+msgstr ""
+
+#: patterns/about.php:19
+msgid "02 — About"
+msgstr ""
+
+#: patterns/about.php:23
+msgid "Hi, I’m Dr. Name."
+msgstr ""
+
+#: patterns/about.php:27
+msgid "Ten years helping people eat well without extreme rules. A short, honest bio goes here: training, approach, and who you work best with."
+msgstr ""
+
+#: patterns/about.php:33
+msgid "clients"
+msgstr ""
+
+#: patterns/about.php:39
+msgid "years"
+msgstr ""
+
+#: patterns/about.php:45
+msgid "rating"
+msgstr ""
+
+#: patterns/about.php:52
+msgid "Read my story"
+msgstr ""
+
+#: patterns/blog.php
+msgctxt "Pattern title"
+msgid "Journal: latest posts"
+msgstr ""
+
+#: patterns/blog.php
+msgctxt "Pattern description"
+msgid "Three latest posts in a grid."
+msgstr ""
+
+#: patterns/blog.php:11
+msgid "07 — Journal"
+msgstr ""
+
+#: patterns/blog.php:15
+msgid "Latest articles"
+msgstr ""
+
+#: patterns/blog.php:31
+msgid "Articles will appear here once you publish your first post."
+msgstr ""
+
+#: patterns/booking-cta.php
+msgctxt "Pattern title"
+msgid "Booking band"
+msgstr ""
+
+#: patterns/booking-cta.php
+msgctxt "Pattern description"
+msgid "Dark call-to-action band with booking and client login buttons."
+msgstr ""
+
+#: patterns/booking-cta.php:11
+msgid "Ready to feel better about food?"
+msgstr ""
+
+#: patterns/booking-cta.php:15
+msgid "Book a first consultation, or log in to your client area."
+msgstr ""
+
+#: patterns/booking-cta.php:20
+msgid "Book a consultation"
+msgstr ""
+
+#: patterns/booking-cta.php:24
+msgid "Client login"
+msgstr ""
+
+#: patterns/contact.php
+msgctxt "Pattern title"
+msgid "Contact details"
+msgstr ""
+
+#: patterns/contact.php
+msgctxt "Pattern description"
+msgid "Contact details and an email button. Replace with your own form."
+msgstr ""
+
+#: patterns/contact.php:13
+msgid "08 — Contact"
+msgstr ""
+
+#: patterns/contact.php:17
+msgid "Let’s talk"
+msgstr ""
+
+#: patterns/contact.php:21
+#: patterns/footer-columns.php:42
+msgid "hello@example.com"
+msgstr ""
+
+#: patterns/contact.php:21
+#: patterns/footer-columns.php:52
+msgid "Mon to Fri, 9am to 5pm"
+msgstr ""
+
+#: patterns/contact.php:21
+#: patterns/footer-columns.php:42
+msgid "Clinic address line, City"
+msgstr ""
+
+#: patterns/contact.php:27
+msgid "Add your preferred contact form here, or use the button below to send an email."
+msgstr ""
+
+#: patterns/contact.php:32
+msgid "Send an email"
+msgstr ""
+
+#: patterns/faq.php
+msgctxt "Pattern title"
+msgid "FAQ with details blocks"
+msgstr ""
+
+#: patterns/faq.php
+msgctxt "Pattern description"
+msgid "Questions that expand and collapse, no JavaScript."
+msgstr ""
+
+#: patterns/faq.php:13
+msgid "06 — FAQ"
+msgstr ""
+
+#: patterns/faq.php:17
+msgid "Common questions"
+msgstr ""
+
+#: patterns/faq.php:23
+msgid "Do I need a referral?"
+msgstr ""
+
+#: patterns/faq.php:24
+msgid "Not usually. Check with your insurer if you plan to claim."
+msgstr ""
+
+#: patterns/faq.php:29
+msgid "Are sessions online or in person?"
+msgstr ""
+
+#: patterns/faq.php:30
+msgid "Both. Choose what suits you when you book."
+msgstr ""
+
+#: patterns/faq.php:35
+msgid "How long until I see progress?"
+msgstr ""
+
+#: patterns/faq.php:36
+msgid "It varies from person to person. We review together at each follow-up."
+msgstr ""
+
+#: patterns/faq.php:41
+msgid "Do you work with families?"
+msgstr ""
+
+#: patterns/faq.php:42
+msgid "Yes, including children and teens with a parent present."
+msgstr ""
+
+#: patterns/footer-columns.php
+msgctxt "Pattern title"
+msgid "Footer columns"
+msgstr ""
+
+#: patterns/footer-columns.php
+msgctxt "Pattern description"
+msgid "Brand, pages, contact and hours columns with the education disclaimer."
+msgstr ""
+
+#: patterns/footer-columns.php:22
+msgid "Pages"
+msgstr ""
+
+#: patterns/footer-columns.php:26
+#: patterns/header-nav.php:11
+msgid "Services"
+msgstr ""
+
+#: patterns/footer-columns.php:28
+#: patterns/header-nav.php:13
+msgid "About"
+msgstr ""
+
+#: patterns/footer-columns.php:30
+#: patterns/header-nav.php:15
+msgid "Plans"
+msgstr ""
+
+#: patterns/footer-columns.php:32
+#: patterns/header-nav.php:17
+#: patterns/journal-title.php:10
+msgid "Journal"
+msgstr ""
+
+#: patterns/footer-columns.php:38
+#: patterns/header-nav.php:19
+msgid "Contact"
+msgstr ""
+
+#: patterns/footer-columns.php:48
+msgid "Hours"
+msgstr ""
+
+#: patterns/footer-columns.php:52
+msgid "Online and in clinic"
+msgstr ""
+
+#: patterns/footer-columns.php:62
+msgid "Nutrition information on this site is for education and is not medical advice."
+msgstr ""
+
+#: patterns/header-nav.php
+msgctxt "Pattern title"
+msgid "Header navigation"
+msgstr ""
+
+#: patterns/header-nav.php
+msgctxt "Pattern description"
+msgid "Menu links and the Book a call button."
+msgstr ""
+
+#: patterns/header-nav.php:24
+#: patterns/process.php:25
+msgid "Book a call"
+msgstr ""
+
+#: patterns/hero.php
+msgctxt "Pattern title"
+msgid "Hero: balanced plate"
+msgstr ""
+
+#: patterns/hero.php
+msgctxt "Pattern description"
+msgid "Headline, buttons and a round plate photo inside a three-segment ring."
+msgstr ""
+
+#: patterns/hero.php:13
+msgid "Registered Dietitian · Clinical Nutrition"
+msgstr ""
+
+#: patterns/hero.php:17
+msgid "Evidence-based care, explained clearly."
+msgstr ""
+
+#: patterns/hero.php:21
+msgid "Practical support for diabetes, gut health and weight management, one balanced plate at a time."
+msgstr ""
+
+#: patterns/hero.php:26
+msgid "Request appointment"
+msgstr ""
+
+#: patterns/hero.php:30
+msgid "View services"
+msgstr ""
+
+#: patterns/hero.php:35
+msgid "RD, MSc · Diabetes educator · 10+ years"
+msgstr ""
+
+#: patterns/hero.php:42
+msgid "A bowl of oats, banana and berries"
+msgstr ""
+
+#: patterns/hero.php:46
+msgid "Whole grains"
+msgstr ""
+
+#: patterns/hero.php:50
+msgid "Vegetables & fruit"
+msgstr ""
+
+#: patterns/hero.php:54
+msgid "Lean protein"
+msgstr ""
+
+#: patterns/hero.php:58
+msgid "A balanced plate, simplified"
+msgstr ""
+
+#: patterns/journal-title.php
+msgctxt "Pattern title"
+msgid "Journal title"
+msgstr ""
+
+#: patterns/journal-title.php
+msgctxt "Pattern description"
+msgid "Page title for the posts index."
+msgstr ""
+
+#: patterns/no-posts.php
+msgctxt "Pattern title"
+msgid "No posts yet"
+msgstr ""
+
+#: patterns/no-posts.php
+msgctxt "Pattern description"
+msgid "Message shown when a list has no posts."
+msgstr ""
+
+#: patterns/no-posts.php:10
+msgid "Nothing to show here yet. Please check back soon."
+msgstr ""
+
+#: patterns/not-found.php
+msgctxt "Pattern title"
+msgid "Page not found"
+msgstr ""
+
+#: patterns/not-found.php
+msgctxt "Pattern description"
+msgid "Heading, message and search for the 404 page."
+msgstr ""
+
+#: patterns/not-found.php:10
+msgid "Page not found"
+msgstr ""
+
+#: patterns/not-found.php:14
+msgid "We couldn’t find the page you were looking for. Try searching, or head back to the homepage."
+msgstr ""
+
+#: patterns/not-found.php:17
+#: patterns/search-empty.php:13
+#: patterns/search-form.php:9
+msgid "Search"
+msgstr ""
+
+#: patterns/pricing.php
+msgctxt "Pattern title"
+msgid "Pricing: three plans"
+msgstr ""
+
+#: patterns/pricing.php
+msgctxt "Pattern description"
+msgid "Three plan columns, the middle one highlighted."
+msgstr ""
+
+#: patterns/pricing.php:11
+msgid "04 — Plans"
+msgstr ""
+
+#: patterns/pricing.php:15
+msgid "Simple, transparent pricing"
+msgstr ""
+
+#: patterns/pricing.php:21
+msgid "Single session"
+msgstr ""
+
+#: patterns/pricing.php:25
+msgid "/ session"
+msgstr ""
+
+#: patterns/pricing.php:29
+msgid "One focused 45-minute consult."
+msgstr ""
+
+#: patterns/pricing.php:34
+msgid "Assessment"
+msgstr ""
+
+#: patterns/pricing.php:37
+msgid "Written summary"
+msgstr ""
+
+#: patterns/pricing.php:44
+#: patterns/pricing.php:77
+#: patterns/pricing.php:110
+msgid "Choose"
+msgstr ""
+
+#: patterns/pricing.php:51
+msgid "Monthly care"
+msgstr ""
+
+#: patterns/pricing.php:55
+msgid "/ month"
+msgstr ""
+
+#: patterns/pricing.php:59
+msgid "Regular sessions and support."
+msgstr ""
+
+#: patterns/pricing.php:64
+msgid "3 sessions"
+msgstr ""
+
+#: patterns/pricing.php:67
+msgid "Meal plan"
+msgstr ""
+
+#: patterns/pricing.php:70
+msgid "Message support"
+msgstr ""
+
+#: patterns/pricing.php:84
+msgid "Quarterly"
+msgstr ""
+
+#: patterns/pricing.php:88
+msgid "/ 3 months"
+msgstr ""
+
+#: patterns/pricing.php:92
+msgid "Best value for lasting change."
+msgstr ""
+
+#: patterns/pricing.php:97
+msgid "8 sessions"
+msgstr ""
+
+#: patterns/pricing.php:103
+msgid "Priority support"
+msgstr ""
+
+#: patterns/process.php
+msgctxt "Pattern title"
+msgid "How it works"
+msgstr ""
+
+#: patterns/process.php
+msgctxt "Pattern description"
+msgid "Three numbered steps."
+msgstr ""
+
+#: patterns/process.php:11
+msgid "03 — Process"
+msgstr ""
+
+#: patterns/process.php:15
+msgid "How it works"
+msgstr ""
+
+#: patterns/process.php:29
+msgid "Tell me about your goals and history."
+msgstr ""
+
+#: patterns/process.php:39
+msgid "Get your plan"
+msgstr ""
+
+#: patterns/process.php:43
+msgid "A clear plan with foods you enjoy."
+msgstr ""
+
+#: patterns/process.php:53
+msgid "Stay on track"
+msgstr ""
+
+#: patterns/process.php:57
+msgid "Follow-ups and adjustments as you go."
+msgstr ""
+
+#: patterns/search-empty.php
+msgctxt "Pattern title"
+msgid "No search results"
+msgstr ""
+
+#: patterns/search-empty.php
+msgctxt "Pattern description"
+msgid "Message and a new search when a search finds nothing."
+msgstr ""
+
+#: patterns/search-empty.php:10
+msgid "No results found. Try a different search."
+msgstr ""
+
+#: patterns/search-form.php
+msgctxt "Pattern title"
+msgid "Search form"
+msgstr ""
+
+#: patterns/search-form.php
+msgctxt "Pattern description"
+msgid "Wide search form shown above search results."
+msgstr ""
+
+#: patterns/services.php
+msgctxt "Pattern title"
+msgid "Services list"
+msgstr ""
+
+#: patterns/services.php
+msgctxt "Pattern description"
+msgid "Numbered service rows separated by hairlines."
+msgstr ""
+
+#: patterns/services.php:11
+msgid "01 — Services"
+msgstr ""
+
+#: patterns/services.php:15
+msgid "Care that meets you where you are"
+msgstr ""
+
+#: patterns/services.php:23
+msgid "Initial consultation"
+msgstr ""
+
+#: patterns/services.php:26
+msgid "A full assessment and a plan you can actually follow."
+msgstr ""
+
+#: patterns/services.php:35
+msgid "Personalised meal planning"
+msgstr ""
+
+#: patterns/services.php:38
+msgid "Simple weekly plans with shopping lists and swaps."
+msgstr ""
+
+#: patterns/services.php:47
+msgid "Condition-specific support"
+msgstr ""
+
+#: patterns/services.php:50
+msgid "Diabetes, IBS, cholesterol and more, with clear targets."
+msgstr ""
+
+#: patterns/services.php:59
+msgid "Ongoing follow-up"
+msgstr ""
+
+#: patterns/services.php:62
+msgid "Regular check-ins so small changes stay on track."
+msgstr ""
+
+#: patterns/testimonials.php
+msgctxt "Pattern title"
+msgid "One large testimonial"
+msgstr ""
+
+#: patterns/testimonials.php
+msgctxt "Pattern description"
+msgid "A single large client quote with a results-vary note."
+msgstr ""
+
+#: patterns/testimonials.php:11
+msgid "05 — Kind words"
+msgstr ""
+
+#: patterns/testimonials.php:15
+msgid "“Clear advice that fit my routine. For the first time I understand what to eat and why.”"
+msgstr ""
+
+#: patterns/testimonials.php:19
+msgid "Client name"
+msgstr ""
+
+#: patterns/testimonials.php:19
+msgid "Individual results vary."
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Sage deep"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Sage"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Sage soft"
+msgstr ""
+
+#: theme.json
+#: styles/colors/ocean.json
+#: styles/colors/plum.json
+#: styles/colors/teal.json
+#: styles/colors/terracotta.json
+msgctxt "Color name"
+msgid "White"
+msgstr ""
+
+#: theme.json
+#: styles/colors/ocean.json
+#: styles/colors/plum.json
+#: styles/colors/teal.json
+#: styles/colors/terracotta.json
+msgctxt "Color name"
+msgid "Slate"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Sage night"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Sage tint"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Sage line"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "DM Sans"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Fraunces"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System sans"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra large"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "1"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "2"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "3"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "4"
+msgstr ""
+
+#: styles/colors/ocean.json
+msgctxt "Style variation name"
+msgid "Ocean"
+msgstr ""
+
+#: styles/colors/ocean.json
+msgctxt "Color name"
+msgid "Ocean deep"
+msgstr ""
+
+#: styles/colors/ocean.json
+msgctxt "Color name"
+msgid "Ocean"
+msgstr ""
+
+#: styles/colors/ocean.json
+msgctxt "Color name"
+msgid "Ocean soft"
+msgstr ""
+
+#: styles/colors/ocean.json
+msgctxt "Color name"
+msgid "Ocean night"
+msgstr ""
+
+#: styles/colors/ocean.json
+msgctxt "Color name"
+msgid "Ocean tint"
+msgstr ""
+
+#: styles/colors/ocean.json
+msgctxt "Color name"
+msgid "Ocean line"
+msgstr ""
+
+#: styles/colors/plum.json
+msgctxt "Style variation name"
+msgid "Plum"
+msgstr ""
+
+#: styles/colors/plum.json
+msgctxt "Color name"
+msgid "Plum deep"
+msgstr ""
+
+#: styles/colors/plum.json
+msgctxt "Color name"
+msgid "Plum"
+msgstr ""
+
+#: styles/colors/plum.json
+msgctxt "Color name"
+msgid "Plum soft"
+msgstr ""
+
+#: styles/colors/plum.json
+msgctxt "Color name"
+msgid "Plum night"
+msgstr ""
+
+#: styles/colors/plum.json
+msgctxt "Color name"
+msgid "Plum tint"
+msgstr ""
+
+#: styles/colors/plum.json
+msgctxt "Color name"
+msgid "Plum line"
+msgstr ""
+
+#: styles/colors/teal.json
+msgctxt "Style variation name"
+msgid "Teal"
+msgstr ""
+
+#: styles/colors/teal.json
+msgctxt "Color name"
+msgid "Deep teal"
+msgstr ""
+
+#: styles/colors/teal.json
+msgctxt "Color name"
+msgid "Teal"
+msgstr ""
+
+#: styles/colors/teal.json
+msgctxt "Color name"
+msgid "Soft teal"
+msgstr ""
+
+#: styles/colors/teal.json
+msgctxt "Color name"
+msgid "Night teal"
+msgstr ""
+
+#: styles/colors/teal.json
+msgctxt "Color name"
+msgid "Teal tint"
+msgstr ""
+
+#: styles/colors/teal.json
+msgctxt "Color name"
+msgid "Teal line"
+msgstr ""
+
+#: styles/colors/terracotta.json
+msgctxt "Style variation name"
+msgid "Terracotta"
+msgstr ""
+
+#: styles/colors/terracotta.json
+msgctxt "Color name"
+msgid "Terracotta deep"
+msgstr ""
+
+#: styles/colors/terracotta.json
+msgctxt "Color name"
+msgid "Terracotta"
+msgstr ""
+
+#: styles/colors/terracotta.json
+msgctxt "Color name"
+msgid "Terracotta soft"
+msgstr ""
+
+#: styles/colors/terracotta.json
+msgctxt "Color name"
+msgid "Terracotta night"
+msgstr ""
+
+#: styles/colors/terracotta.json
+msgctxt "Color name"
+msgid "Terracotta tint"
+msgstr ""
+
+#: styles/colors/terracotta.json
+msgctxt "Color name"
+msgid "Terracotta line"
+msgstr ""
+
+#: styles/typography/inter.json
+msgctxt "Style variation name"
+msgid "Inter"
+msgstr ""
+
+#: styles/typography/inter.json
+msgctxt "Font family name"
+msgid "Inter"
+msgstr ""

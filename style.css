@@ -1,0 +1,487 @@
+/*
+Theme Name: Nutri Care
+Theme URI: https://github.com/lihsaa591/nutri-care
+Author: Aashil Bijukshe
+Author URI: https://profiles.wordpress.org/lihsaa/
+Description: A minimal, editorial block theme for dietitians and nutritionists. Clean patterns for services, pricing, testimonials, FAQ, booking and a journal. Works well on its own, and pairs optionally with the MeroDiet plugin for meal plans, a client portal and progress tracking.
+Version: 1.0.0
+Requires at least: 6.6
+Tested up to: 7.1
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: nutri-care
+Domain Path: /languages
+Tags: block-patterns, full-site-editing, style-variations, custom-logo, blog, one-column, custom-colors, wide-blocks, translation-ready
+*/
+
+.nc-header {
+	border-bottom: 1px solid var(--wp--preset--color--soft);
+}
+
+/* Typography helpers */
+.nc-eyebrow,
+.nc-eyebrow a {
+	color: var(--wp--preset--color--accent);
+	font-size: 0.6875rem;
+	font-weight: 600;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	margin-bottom: 0;
+}
+
+.nc-display {
+	font-size: clamp(2rem, 1rem + 2.7vw, 3.25rem);
+	letter-spacing: -0.03em;
+	line-height: 1.02;
+	margin-top: 1rem;
+}
+
+.nc-lead {
+	color: var(--wp--preset--color--muted);
+	font-size: 1.0625rem;
+	max-width: 30rem;
+}
+
+.nc-credentials {
+	border-top: 1px solid var(--wp--preset--color--line);
+	color: var(--wp--preset--color--muted);
+	font-size: 0.6875rem;
+	font-weight: 600;
+	letter-spacing: 0.12em;
+	margin-top: 2rem;
+	padding-top: 1.1rem;
+	text-transform: uppercase;
+}
+
+/* Buttons */
+.nc-btn-outline .wp-block-button__link {
+	background: transparent;
+	border: 1px solid var(--wp--preset--color--contrast);
+	color: var(--wp--preset--color--contrast);
+}
+
+.nc-btn-light .wp-block-button__link {
+	background: var(--wp--preset--color--base);
+	color: var(--wp--preset--color--contrast);
+}
+
+.nc-btn-ghost .wp-block-button__link {
+	background: transparent;
+	border: 1px solid var(--wp--preset--color--base);
+	color: var(--wp--preset--color--base);
+}
+
+.wp-block-button__link:focus-visible {
+	outline: 3px solid var(--wp--preset--color--accent);
+	outline-offset: 2px;
+}
+
+/* Hero plate */
+.nc-hero .wp-block-columns {
+	gap: 2rem;
+}
+
+.nc-plate {
+	aspect-ratio: 1;
+	background: radial-gradient(circle closest-side, color-mix(in srgb, var(--wp--preset--color--base) 70%, transparent) 94%, transparent 94.5%);
+	margin: 0 auto;
+	max-width: 540px;
+	position: relative;
+}
+
+.nc-plate::before {
+	background: conic-gradient(
+		var(--wp--preset--color--accent) 0 49%,
+		transparent 49% 50%,
+		var(--wp--preset--color--contrast) 50% 74%,
+		transparent 74% 75%,
+		var(--wp--preset--color--tint) 75% 99%,
+		transparent 99% 100%
+	);
+	border-radius: 50%;
+	content: "";
+	inset: 9%;
+	-webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 16px), #000 calc(100% - 15px));
+	mask: radial-gradient(farthest-side, transparent calc(100% - 16px), #000 calc(100% - 15px));
+	position: absolute;
+}
+
+.nc-plate .nc-plate__photo {
+	border: 6px solid var(--wp--preset--color--base);
+	border-radius: 50%;
+	inset: 16.5%;
+	margin: 0;
+	overflow: hidden;
+	position: absolute;
+}
+
+.nc-plate .nc-plate__photo img {
+	border-radius: 0;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.nc-plate .nc-plate__label {
+	background: var(--wp--preset--color--base);
+	border-radius: var(--wp--custom--radius);
+	box-shadow: 0 8px 22px rgba(15, 58, 70, 0.13);
+	color: var(--wp--preset--color--muted);
+	font-size: 0.75rem;
+	line-height: 1.25;
+	margin: 0;
+	padding: 0.6rem 0.85rem;
+	position: absolute;
+}
+
+.nc-plate .nc-plate__label strong {
+	color: var(--wp--preset--color--contrast);
+	display: block;
+	font-size: 1.375rem;
+	letter-spacing: -0.03em;
+}
+
+.nc-plate .nc-plate__label--grains {
+	left: 0;
+	top: 8%;
+}
+
+.nc-plate .nc-plate__label--veg {
+	right: 0;
+	top: 42%;
+}
+
+.nc-plate .nc-plate__label--protein {
+	bottom: 12%;
+	left: 0;
+}
+
+.nc-plate .nc-plate__caption {
+	bottom: 2%;
+	color: var(--wp--preset--color--muted);
+	left: 0;
+	position: absolute;
+	right: 0;
+	font-size: 0.6875rem;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	margin: 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+/* Services */
+.wp-block-group.nc-svc {
+	align-items: baseline;
+	flex-wrap: nowrap;
+	border-top: 1px solid var(--wp--preset--color--line);
+	gap: 1.5rem;
+	padding: 1.4rem 0;
+}
+
+.nc-svc:last-of-type {
+	border-bottom: 1px solid var(--wp--preset--color--line);
+}
+
+.nc-svc h3 {
+	flex: 0 0 20rem;
+	font-size: 1.375rem;
+	margin: 0;
+}
+
+.nc-svc p {
+	color: var(--wp--preset--color--muted);
+	margin: 0;
+}
+
+.nc-svc__no {
+	color: var(--wp--preset--color--accent);
+	font-size: 0.875rem;
+	font-weight: 600;
+	width: 2rem;
+}
+
+/* About stats, process */
+.nc-stat strong {
+	display: block;
+	font-size: clamp(1.75rem, 1.1rem + 1.6vw, 2.5rem);
+	white-space: nowrap;
+	letter-spacing: -0.03em;
+	line-height: 1;
+}
+
+.nc-step__no {
+	color: var(--wp--preset--color--tint);
+	font-size: 3.5rem;
+	font-weight: 700;
+	letter-spacing: -0.03em;
+	line-height: 1;
+	margin: 0;
+}
+
+/* Pricing */
+.nc-plan {
+	border-top: 2px solid var(--wp--preset--color--contrast);
+	display: flex;
+	flex-direction: column;
+	padding: 1.75rem;
+}
+
+.nc-plan .wp-block-buttons {
+	margin-top: auto;
+	padding-top: 1rem;
+}
+
+.nc-plan--featured {
+	background: var(--wp--preset--color--contrast);
+	border-radius: var(--wp--custom--radius);
+	color: var(--wp--preset--color--base);
+}
+
+.nc-plan__price {
+	font-size: 2.75rem;
+	font-weight: 700;
+	letter-spacing: -0.03em;
+}
+
+.nc-plan__list {
+	list-style: none;
+	padding: 0;
+}
+
+.nc-plan__list li {
+	border-top: 1px solid var(--wp--preset--color--line);
+	padding: 0.5rem 0;
+}
+
+.nc-plan--featured .nc-plan__list li {
+	border-color: color-mix(in srgb, var(--wp--preset--color--base) 22%, transparent);
+}
+
+.nc-plan--featured .wp-block-button__link {
+	background: var(--wp--preset--color--base);
+	color: var(--wp--preset--color--contrast);
+}
+
+/* Testimonial */
+.nc-testimonial {
+	text-align: center;
+}
+
+.nc-quote {
+	font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.125rem);
+	font-weight: 600;
+	letter-spacing: -0.02em;
+	line-height: 1.25;
+	margin: 1.5rem auto;
+	max-width: 52rem;
+}
+
+.nc-quote__by {
+	color: var(--wp--preset--color--muted);
+	font-size: 0.8125rem;
+}
+
+/* FAQ */
+.nc-faq .wp-block-details {
+	border-top: 1px solid var(--wp--preset--color--line);
+	padding: 1.1rem 0;
+}
+
+.nc-faq .wp-block-details summary {
+	cursor: pointer;
+	font-size: 1.0625rem;
+	font-weight: 600;
+}
+
+/* Booking band */
+.nc-band {
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+}
+
+.nc-band::before {
+	background: url("assets/images/fruit-platter.webp") center / cover;
+	content: "";
+	inset: 0;
+	opacity: 0.16;
+	position: absolute;
+}
+
+.nc-band > * {
+	position: relative;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+	.wp-block-group.nc-svc {
+		flex-wrap: wrap;
+	}
+
+	.nc-svc h3 {
+		flex-basis: 100%;
+	}
+
+	.nc-plate .nc-plate__label {
+		font-size: 0.6875rem;
+		padding: 0.4rem 0.6rem;
+	}
+
+	.nc-plate .nc-plate__label strong {
+		font-size: 1rem;
+	}
+}
+
+.nc-footer-heading {
+	color: var(--wp--preset--color--tint);
+	font-weight: 600;
+	letter-spacing: 0.12em;
+	margin-bottom: 0.5rem;
+	text-transform: uppercase;
+}
+
+:where(a, summary, button):focus-visible {
+	outline: 3px solid var(--wp--preset--color--accent);
+	outline-offset: 2px;
+}
+
+.has-deep-background-color :where(a, button):focus-visible,
+.nc-band :where(a, button):focus-visible {
+	outline-color: var(--wp--preset--color--base);
+}
+
+/* About */
+.nc-about .wp-block-columns {
+	gap: 3rem;
+}
+
+.nc-about .wp-block-image,
+.nc-about .wp-block-image img {
+	height: 100%;
+}
+
+.nc-about .wp-block-image img {
+	min-height: 26rem;
+	object-fit: cover;
+	object-position: 50% 18%;
+	width: 100%;
+}
+
+/* Display numbers and quotes use the heading font */
+.nc-quote,
+.nc-plan__price,
+.nc-stat strong,
+.nc-step__no,
+.nc-plate__label strong {
+	font-family: var(--wp--custom--font-display);
+}
+
+/* Spacing and wrapping polish */
+.wp-block-group.nc-svc {
+	margin-block-start: 0;
+}
+
+.nc-faq .wp-block-details + .wp-block-details {
+	margin-block-start: 0;
+}
+
+h1,
+h2,
+h3 {
+	text-wrap: balance;
+}
+
+p {
+	text-wrap: pretty;
+}
+
+/* Side gutters for full-width sections (patterns add their own, so the front-page wrapper is flush) */
+:root {
+	--nc-gutter: clamp(1rem, 5vw, 2rem);
+}
+
+.wp-block-group.alignfull {
+	padding-inline: var(--nc-gutter);
+}
+
+.wp-block-group.alignfull.nc-flush {
+	padding-inline: 0;
+}
+
+/* Mobile menu overlay */
+.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open {
+	padding: 1.5rem var(--nc-gutter) 2rem;
+}
+
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
+	--navigation-layout-justification-setting: flex-start;
+	align-items: flex-start;
+	padding-top: 2rem;
+}
+
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container {
+	align-items: flex-start;
+	gap: 0.25rem;
+}
+
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content {
+	font-family: var(--wp--custom--font-display);
+	font-size: 1.75rem;
+	font-weight: 600;
+	letter-spacing: -0.01em;
+	padding: 0.4rem 0;
+	text-align: left;
+}
+
+/* Block editor: keep the replaceable photo filling the plate circle */
+.nc-plate .nc-plate__photo .components-resizable-box__container {
+	height: 100% !important;
+	position: absolute !important;
+	width: 100% !important;
+}
+
+/* Logo mark: recolours with the palette */
+.nc-mark {
+	flex: none;
+}
+
+.nc-mark__a {
+	stroke: var(--wp--preset--color--accent);
+}
+
+.nc-mark__c {
+	stroke: var(--wp--preset--color--contrast);
+}
+
+.nc-mark__t {
+	stroke: var(--wp--preset--color--tint);
+}
+
+.nc-mark__leaf {
+	fill: var(--wp--preset--color--accent);
+}
+
+.nc-mark__vein {
+	fill: none;
+	stroke: var(--wp--preset--color--base);
+	stroke-linecap: round;
+	stroke-width: 1.6;
+}
+
+.has-deep-background-color .nc-mark__c {
+	stroke: var(--wp--preset--color--base);
+}
+
+.has-deep-background-color .nc-mark__leaf {
+	fill: var(--wp--preset--color--tint);
+}
+
+.has-deep-background-color .nc-mark__vein {
+	stroke: var(--wp--preset--color--deep);
+}
+
+.wp-block-heading + .wp-block-group.nc-svc {
+	margin-block-start: 1.75rem;
+}

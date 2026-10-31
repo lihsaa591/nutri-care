@@ -1,0 +1,51 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Teal",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "contrast",
+					"color": "#0F3A46",
+					"name": "Deep teal"
+				},
+				{
+					"slug": "accent",
+					"color": "#1F7A8C",
+					"name": "Teal"
+				},
+				{
+					"slug": "soft",
+					"color": "#EEF6F7",
+					"name": "Soft teal"
+				},
+				{
+					"slug": "base",
+					"color": "#FFFFFF",
+					"name": "White"
+				},
+				{
+					"slug": "muted",
+					"color": "#46636B",
+					"name": "Slate"
+				},
+				{
+					"slug": "deep",
+					"color": "#0A2A33",
+					"name": "Night teal"
+				},
+				{
+					"slug": "tint",
+					"color": "#8CC7D2",
+					"name": "Teal tint"
+				},
+				{
+					"slug": "line",
+					"color": "#D5E4E7",
+					"name": "Teal line"
+				}
+			]
+		}
+	}
+}
