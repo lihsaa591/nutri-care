@@ -186,3 +186,14 @@ test( 'style.css and readme.txt agree on Tested up to, and tags match the featur
 	assert.ok( ! tags.includes( 'accessibility-ready' ), 'accessibility-ready triggers a separate review' );
 	[ 'custom-logo', 'style-variations', 'block-patterns', 'full-site-editing' ].forEach( ( t ) => assert.ok( tags.includes( t ), `${ t } tag missing` ) );
 } );
+
+test( 'the built zip contains the theme and none of the development files', () => {
+	const { execFileSync } = require( 'node:child_process' );
+	execFileSync( 'bash', [ path.join( root, 'bin/build-zip.sh' ) ], { cwd: root, stdio: 'ignore' } );
+	const files = execFileSync( 'unzip', [ '-Z1', path.join( root, 'dist/nutri-care.zip' ) ], { encoding: 'utf8' } ).split( '\n' );
+	[ 'style.css', 'theme.json', 'readme.txt', 'screenshot.png', 'functions.php', 'templates/front-page.html' ].forEach( ( f ) =>
+		assert.ok( files.includes( `nutri-care/${ f }` ), `${ f } missing from zip` )
+	);
+	const dev = files.filter( ( f ) => /(^|\/)(tests|bin|branding|vendor|node_modules|\.github|\.git)\/|phpcs\.xml|phpunit\.xml|composer\.|package(-lock)?\.json|\.sh$/.test( f ) );
+	assert.deepStrictEqual( dev, [] );
+} );
