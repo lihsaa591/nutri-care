@@ -1,0 +1,51 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Sage",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "contrast",
+					"color": "#24362B",
+					"name": "Sage deep"
+				},
+				{
+					"slug": "accent",
+					"color": "#4B7556",
+					"name": "Sage"
+				},
+				{
+					"slug": "soft",
+					"color": "#EEF4EE",
+					"name": "Sage soft"
+				},
+				{
+					"slug": "base",
+					"color": "#FFFFFF",
+					"name": "White"
+				},
+				{
+					"slug": "muted",
+					"color": "#4A5F50",
+					"name": "Slate"
+				},
+				{
+					"slug": "deep",
+					"color": "#17241B",
+					"name": "Sage night"
+				},
+				{
+					"slug": "tint",
+					"color": "#A9C9B0",
+					"name": "Sage tint"
+				},
+				{
+					"slug": "line",
+					"color": "#D6E3D8",
+					"name": "Sage line"
+				}
+			]
+		}
+	}
+}

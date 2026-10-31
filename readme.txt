@@ -69,3 +69,5 @@ https://commons.wikimedia.org/wiki/File:Fruit_Platter_(Unsplash).jpg
 Fraunces by Undercase Type and DM Sans by Colophon Foundry, both licensed under the SIL Open Font License 1.1 (https://openfontlicense.org). Bundled as local woff2 files in assets/fonts/.
 Fraunces: https://github.com/undercasetype/Fraunces
 DM Sans: https://github.com/googlefonts/dm-fonts
+Inter by Rasmus Andersson, licensed under the SIL Open Font License 1.1 (https://openfontlicense.org). Used by the optional "Inter" typography style variation.
+Inter: https://github.com/rsms/inter

@@ -42,8 +42,8 @@ Tags: block-patterns, full-site-editing, blog, one-column, custom-colors, wide-b
 }
 
 .nc-credentials {
-	border-top: 1px solid #c9dde1;
-	color: #4f6f77;
+	border-top: 1px solid var(--wp--preset--color--line);
+	color: var(--wp--preset--color--muted);
 	font-size: 0.6875rem;
 	font-weight: 600;
 	letter-spacing: 0.12em;
@@ -82,7 +82,7 @@ Tags: block-patterns, full-site-editing, blog, one-column, custom-colors, wide-b
 
 .nc-plate {
 	aspect-ratio: 1;
-	background: radial-gradient(circle closest-side, rgba(255, 255, 255, 0.7) 94%, transparent 94.5%);
+	background: radial-gradient(circle closest-side, color-mix(in srgb, var(--wp--preset--color--base) 70%, transparent) 94%, transparent 94.5%);
 	margin: 0 auto;
 	max-width: 540px;
 	position: relative;
@@ -90,11 +90,11 @@ Tags: block-patterns, full-site-editing, blog, one-column, custom-colors, wide-b
 
 .nc-plate::before {
 	background: conic-gradient(
-		#1f7a8c 0 49%,
+		var(--wp--preset--color--accent) 0 49%,
 		transparent 49% 50%,
-		#0f3a46 50% 74%,
+		var(--wp--preset--color--contrast) 50% 74%,
 		transparent 74% 75%,
-		#8cc7d2 75% 99%,
+		var(--wp--preset--color--tint) 75% 99%,
 		transparent 99% 100%
 	);
 	border-radius: 50%;
@@ -157,7 +157,7 @@ Tags: block-patterns, full-site-editing, blog, one-column, custom-colors, wide-b
 
 .nc-plate__caption {
 	bottom: 2%;
-	color: #4f6f77;
+	color: var(--wp--preset--color--muted);
 	left: 0;
 	position: absolute;
 	right: 0;
@@ -173,13 +173,13 @@ Tags: block-patterns, full-site-editing, blog, one-column, custom-colors, wide-b
 .wp-block-group.nc-svc {
 	align-items: baseline;
 	flex-wrap: nowrap;
-	border-top: 1px solid #d5e4e7;
+	border-top: 1px solid var(--wp--preset--color--line);
 	gap: 1.5rem;
 	padding: 1.4rem 0;
 }
 
 .nc-svc:last-of-type {
-	border-bottom: 1px solid #d5e4e7;
+	border-bottom: 1px solid var(--wp--preset--color--line);
 }
 
 .nc-svc h3 {
@@ -210,7 +210,7 @@ Tags: block-patterns, full-site-editing, blog, one-column, custom-colors, wide-b
 }
 
 .nc-step__no {
-	color: #b9d6dc;
+	color: var(--wp--preset--color--tint);
 	font-size: 3.5rem;
 	font-weight: 700;
 	letter-spacing: -0.03em;
@@ -249,12 +249,12 @@ Tags: block-patterns, full-site-editing, blog, one-column, custom-colors, wide-b
 }
 
 .nc-plan__list li {
-	border-top: 1px solid #d5e4e7;
+	border-top: 1px solid var(--wp--preset--color--line);
 	padding: 0.5rem 0;
 }
 
 .nc-plan--featured .nc-plan__list li {
-	border-color: #2b5663;
+	border-color: color-mix(in srgb, var(--wp--preset--color--base) 22%, transparent);
 }
 
 .nc-plan--featured .wp-block-button__link {
@@ -283,7 +283,7 @@ Tags: block-patterns, full-site-editing, blog, one-column, custom-colors, wide-b
 
 /* FAQ */
 .nc-faq .wp-block-details {
-	border-top: 1px solid #c9dde1;
+	border-top: 1px solid var(--wp--preset--color--line);
 	padding: 1.1rem 0;
 }
 
@@ -333,7 +333,7 @@ Tags: block-patterns, full-site-editing, blog, one-column, custom-colors, wide-b
 }
 
 .nc-footer-heading {
-	color: #9fd3dd;
+	color: var(--wp--preset--color--tint);
 	font-weight: 600;
 	letter-spacing: 0.12em;
 	margin-bottom: 0.5rem;
@@ -373,7 +373,7 @@ Tags: block-patterns, full-site-editing, blog, one-column, custom-colors, wide-b
 .nc-stat strong,
 .nc-step__no,
 .nc-plate__label strong {
-	font-family: var(--wp--preset--font-family--fraunces);
+	font-family: var(--wp--custom--font-display);
 }
 
 /* Spacing and wrapping polish */
@@ -425,7 +425,7 @@ p {
 }
 
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content {
-	font-family: var(--wp--preset--font-family--fraunces);
+	font-family: var(--wp--custom--font-display);
 	font-size: 1.75rem;
 	font-weight: 600;
 	letter-spacing: -0.01em;

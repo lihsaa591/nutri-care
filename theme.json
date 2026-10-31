@@ -38,6 +38,16 @@
 					"slug": "deep",
 					"color": "#0A2A33",
 					"name": "Night teal"
+				},
+				{
+					"slug": "tint",
+					"color": "#8CC7D2",
+					"name": "Teal tint"
+				},
+				{
+					"slug": "line",
+					"color": "#D5E4E7",
+					"name": "Teal line"
 				}
 			]
 		},
@@ -154,7 +164,8 @@
 			]
 		},
 		"custom": {
-			"radius": "3px"
+			"radius": "3px",
+			"fontDisplay": "var(--wp--preset--font-family--fraunces)"
 		}
 	},
 	"styles": {
