@@ -83,7 +83,7 @@ Tags: block-patterns, full-site-editing, blog, one-column, custom-colors, wide-b
 .nc-plate {
 	aspect-ratio: 1;
 	background: radial-gradient(circle closest-side, rgba(255, 255, 255, 0.7) 94%, transparent 94.5%);
-	margin: 0 auto 2rem;
+	margin: 0 auto;
 	max-width: 540px;
 	position: relative;
 }
@@ -156,7 +156,7 @@ Tags: block-patterns, full-site-editing, blog, one-column, custom-colors, wide-b
 }
 
 .nc-plate__caption {
-	bottom: -2rem;
+	bottom: 2%;
 	color: #4f6f77;
 	left: 0;
 	position: absolute;
@@ -164,7 +164,7 @@ Tags: block-patterns, full-site-editing, blog, one-column, custom-colors, wide-b
 	font-size: 0.6875rem;
 	font-weight: 600;
 	letter-spacing: 0.14em;
-	margin: 0.5rem 0 0;
+	margin: 0;
 	text-align: center;
 	text-transform: uppercase;
 }
