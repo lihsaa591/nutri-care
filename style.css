@@ -407,3 +407,27 @@ p {
 .wp-block-group.alignfull.nc-flush {
 	padding-inline: 0;
 }
+
+/* Mobile menu overlay */
+.wp-block-navigation__responsive-container.is-menu-open {
+	padding: 1.5rem var(--nc-gutter) 2rem;
+}
+
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
+	--navigation-layout-justification-setting: flex-start;
+	align-items: flex-start;
+	padding-top: 2rem;
+}
+
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container {
+	align-items: flex-start;
+	gap: 0.25rem;
+}
+
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content {
+	font-family: var(--wp--preset--font-family--fraunces);
+	font-size: 1.75rem;
+	font-weight: 600;
+	letter-spacing: -0.01em;
+	padding: 0.4rem 0;
+}

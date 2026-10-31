@@ -132,3 +132,10 @@ test( 'full-width sections get side gutters, except the front-page wrapper', () 
 	assert.match( css, /\.nc-flush\s*\{[^}]*padding-inline:\s*0/ );
 	assert.match( read( 'templates/front-page.html' ), /"className":"nc-flush"[\s\S]*<main class="wp-block-group alignfull nc-flush">/ );
 } );
+
+test( 'mobile menu overlay has theme colours and its own padding', () => {
+	assert.match( read( 'parts/header.html' ), /wp:navigation \{[^}]*"overlayBackgroundColor":"base"[^}]*"overlayTextColor":"contrast"/ );
+	const css = read( 'style.css' );
+	assert.match( css, /\.wp-block-navigation__responsive-container\.is-menu-open\s*\{[^}]*padding:/ );
+	assert.match( css, /is-menu-open[^{]*\.wp-block-navigation-item__content/ );
+} );
