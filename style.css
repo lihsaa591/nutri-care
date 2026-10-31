@@ -12,3 +12,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: nutri-care
 Tags: block-patterns, full-site-editing, blog, one-column, custom-colors, wide-blocks, accessibility-ready, translation-ready
 */
+
+.nc-header {
+	border-bottom: 1px solid var(--wp--preset--color--soft);
+}
