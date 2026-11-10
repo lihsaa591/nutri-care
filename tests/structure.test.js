@@ -117,13 +117,13 @@ test( 'functions.php enqueues style.css on the front end and in the editor', () 
 } );
 
 test( 'header ships the default menu links and a Book a call button', () => {
-	const html = read( 'parts/header.html' );
+	const html = read( 'patterns/header-nav.php' );
 	[ [ 'Services', 'services' ], [ 'About', 'about' ], [ 'Plans', 'pricing' ], [ 'Journal', 'journal' ], [ 'Contact', 'contact' ] ].forEach(
 		( [ label, id ] ) => {
-			assert.match( html, new RegExp( `wp:navigation-link \\{"label":"${ label }"[^}]*"url":"/#${ id }"` ), `${ label } link` );
+			assert.match( html, new RegExp( `wp:navigation-link \\{"label":"<\\?php echo esc_attr__\\( '${ label }', 'nutri-care' \\); \\?>"[^}]*"url":"<\\?php echo esc_url\\( home_url\\( '/#${ id }' \\) \\); \\?>"` ), `${ label } link` );
 		}
 	);
-	assert.match( html, /wp-block-button__link[^>]*href="\/#contact"[^>]*>Book a call</ );
+	assert.match( html, /wp-block-button__link[^>]*href="<\?php echo esc_url\( home_url\( '\/#contact' \) \); \?>"[^>]*><\?php esc_html_e\( 'Book a call'/ );
 } );
 
 test( 'every default menu target exists as an anchor in the patterns', () => {
@@ -195,7 +195,8 @@ test( 'style.css and readme.txt agree on Tested up to, and tags match the featur
 	assert.match( readme, /^Tested up to: 7\.1$/m );
 	const tags = css.match( /^Tags: (.+)$/m )[ 1 ].split( /,\s*/ );
 	assert.ok( ! tags.includes( 'accessibility-ready' ), 'accessibility-ready triggers a separate review' );
-	[ 'custom-logo', 'style-variations', 'block-patterns', 'full-site-editing' ].forEach( ( t ) => assert.ok( tags.includes( t ), `${ t } tag missing` ) );
+	[ 'custom-logo', 'custom-colors' ].forEach( ( t ) => assert.ok( ! tags.includes( t ), `${ t } tag has no matching theme feature` ) );
+	[ 'style-variations', 'block-patterns', 'full-site-editing' ].forEach( ( t ) => assert.ok( tags.includes( t ), `${ t } tag missing` ) );
 } );
 
 test( 'the built zip contains the theme and none of the development files', () => {
@@ -235,7 +236,7 @@ test( 'author details point at the WordPress.org profile', () => {
 
 test( 'languages/nutri-care.pot exists and carries the theme strings', () => {
 	const pot = read( 'languages/nutri-care.pot' );
-	assert.match( pot, /Project-Id-Version: Nutri Care 1\.0\.0/ );
+	assert.match( pot, /Project-Id-Version: Nutri Care 1\.0\.1/ );
 	assert.match( pot, /X-Domain: nutri-care/ );
 	[ 'Evidence-based care, explained clearly.', 'Request appointment', 'Nutri Care pairs well with MeroDiet', 'Meal plans', 'Nutri Care', 'Page not found', 'Book a call', 'Journal', 'No results found. Try a different search.', 'Pages', 'Hours' ].forEach( ( s ) =>
 		assert.ok( pot.includes( `msgid "${ s }"` ), `pot lacks "${ s }"` )

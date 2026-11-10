@@ -23,13 +23,13 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","orientation":"vertical"}} -->
-<!-- wp:navigation-link {"label":"<?php echo esc_attr__( 'Services', 'nutri-care' ); ?>","type":"custom","url":"/#services","kind":"custom","isTopLevelLink":true} /-->
+<!-- wp:navigation-link {"label":"<?php echo esc_attr__( 'Services', 'nutri-care' ); ?>","type":"custom","url":"<?php echo esc_url( home_url( '/#services' ) ); ?>","kind":"custom","isTopLevelLink":true} /-->
 
-<!-- wp:navigation-link {"label":"<?php echo esc_attr__( 'About', 'nutri-care' ); ?>","type":"custom","url":"/#about","kind":"custom","isTopLevelLink":true} /-->
+<!-- wp:navigation-link {"label":"<?php echo esc_attr__( 'About', 'nutri-care' ); ?>","type":"custom","url":"<?php echo esc_url( home_url( '/#about' ) ); ?>","kind":"custom","isTopLevelLink":true} /-->
 
-<!-- wp:navigation-link {"label":"<?php echo esc_attr__( 'Plans', 'nutri-care' ); ?>","type":"custom","url":"/#pricing","kind":"custom","isTopLevelLink":true} /-->
+<!-- wp:navigation-link {"label":"<?php echo esc_attr__( 'Plans', 'nutri-care' ); ?>","type":"custom","url":"<?php echo esc_url( home_url( '/#pricing' ) ); ?>","kind":"custom","isTopLevelLink":true} /-->
 
-<!-- wp:navigation-link {"label":"<?php echo esc_attr__( 'Journal', 'nutri-care' ); ?>","type":"custom","url":"/#journal","kind":"custom","isTopLevelLink":true} /-->
+<!-- wp:navigation-link {"label":"<?php echo esc_attr__( 'Journal', 'nutri-care' ); ?>","type":"custom","url":"<?php echo esc_url( home_url( '/#journal' ) ); ?>","kind":"custom","isTopLevelLink":true} /-->
 <!-- /wp:navigation --></div>
 <!-- /wp:column -->
 
