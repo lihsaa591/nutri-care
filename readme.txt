@@ -58,22 +58,20 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 = Images =
 
 All images are CC0 (public domain dedication) from Wikimedia Commons. License: https://creativecommons.org/publicdomain/zero/1.0/
-The two Unsplash-sourced photos were published on Unsplash before 5 June 2017, when Unsplash photos were still released under CC0, and were uploaded to Wikimedia Commons under CC0 in August 2017. The original Unsplash pages were archived by the Wayback Machine before that date (see the Commons pages below).
+The two Unsplash-sourced photos were published on Unsplash before 5 June 2017, when Unsplash photos were still released under CC0, and were uploaded to Wikimedia Commons under CC0 in August 2017. The Commons pages below link to the archived originals.
 
-Healthy Breakfast by Federica Diliberto (https://unsplash.com/@federyka), photographed 2015.
+Healthy Breakfast by Federica Diliberto (federyka), photographed 2015.
 plate-bowl.webp
 https://commons.wikimedia.org/wiki/File:Healthy_Breakfast_(Unsplash).jpg
-Original: https://unsplash.com/photos/i2eYyFeTfwc
 
 Female doctor by Direct Media, via StockSnap (CC0).
 doctor-portrait.webp
 https://commons.wikimedia.org/wiki/File:Female_doctor.jpg
 https://stocksnap.io/photo/female-doctor-WINC1QDMT4
 
-Fruit Platter by Cecilia Par (https://unsplash.com/@famla_fint), photographed 2016.
+Fruit Platter by Cecilia Par (famla_fint), photographed 2016.
 fruit-platter.webp
 https://commons.wikimedia.org/wiki/File:Fruit_Platter_(Unsplash).jpg
-Original: https://unsplash.com/photos/YUg5RwlnMKc
 
 = Fonts =
 
