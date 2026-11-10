@@ -22,7 +22,7 @@ class Nutri_Care_Plugin_Notice {
 	const META_KEY    = 'nutri_care_merodiet_notice_dismissed';
 	const ACTION      = 'nutri_care_dismiss_notice';
 	const LEARN_MORE  = 'https://wordpress.org/plugins/merodiet/';
-	const VERSION     = '1.0.0';
+	const VERSION     = '1.0.1';
 
 	/**
 	 * Whether the notice should be shown.
@@ -59,6 +59,10 @@ class Nutri_Care_Plugin_Notice {
 				'visible'   => false,
 				'installed' => false,
 			);
+		}
+
+		if ( ! function_exists( 'get_plugins' ) ) {
+			require_once ABSPATH . 'wp-admin/includes/plugin.php';
 		}
 
 		$installed = array_key_exists( self::PLUGIN_FILE, get_plugins() );

@@ -3,7 +3,7 @@ Contributors: lihsaa
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,6 +33,14 @@ No. Add a form block or plugin of your choice in the contact pattern.
 
 == Changelog ==
 
+= 1.0.1 =
+* Removed the custom-logo and custom-colors tags.
+* Header and footer navigation links now use home_url() so anchors work on subdirectory installs and on inner pages.
+* Plugin notice loads wp-admin/includes/plugin.php before calling get_plugins().
+* Removed placeholder translator headers from the translation template.
+* Added the SIL OFL 1.1 licence texts for the bundled fonts.
+* Clarified image credits and licensing.
+
 = 1.0.0 =
 * Initial release.
 
@@ -50,23 +58,26 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 = Images =
 
 All images are CC0 (public domain dedication) from Wikimedia Commons. License: https://creativecommons.org/publicdomain/zero/1.0/
+The two Unsplash-sourced photos were published on Unsplash before 5 June 2017, when Unsplash photos were still released under CC0, and were uploaded to Wikimedia Commons under CC0 in August 2017. The original Unsplash pages were archived by the Wayback Machine before that date (see the Commons pages below).
 
-Healthy Breakfast by Federica Diliberto (federyka).
+Healthy Breakfast by Federica Diliberto (https://unsplash.com/@federyka), photographed 2015.
 plate-bowl.webp
 https://commons.wikimedia.org/wiki/File:Healthy_Breakfast_(Unsplash).jpg
+Original: https://unsplash.com/photos/i2eYyFeTfwc
 
 Female doctor by Direct Media, via StockSnap (CC0).
 doctor-portrait.webp
 https://commons.wikimedia.org/wiki/File:Female_doctor.jpg
 https://stocksnap.io/photo/female-doctor-WINC1QDMT4
 
-Fruit Platter by Cecilia Par famla_fint.
+Fruit Platter by Cecilia Par (https://unsplash.com/@famla_fint), photographed 2016.
 fruit-platter.webp
 https://commons.wikimedia.org/wiki/File:Fruit_Platter_(Unsplash).jpg
+Original: https://unsplash.com/photos/YUg5RwlnMKc
 
 = Fonts =
 
-Fraunces by Undercase Type and DM Sans by Colophon Foundry, both licensed under the SIL Open Font License 1.1 (https://openfontlicense.org). Bundled as local woff2 files in assets/fonts/.
+Fraunces by Undercase Type and DM Sans by Colophon Foundry, both licensed under the SIL Open Font License 1.1 (https://openfontlicense.org). Bundled as local woff2 files in assets/fonts/. Full licence texts: assets/fonts/OFL-fraunces.txt, assets/fonts/OFL-dm-sans.txt and assets/fonts/OFL-inter.txt.
 Fraunces: https://github.com/undercasetype/Fraunces
 DM Sans: https://github.com/googlefonts/dm-fonts
 Inter by Rasmus Andersson, licensed under the SIL Open Font License 1.1 (https://openfontlicense.org). Used by the optional "Inter" typography style variation.
