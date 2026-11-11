@@ -39,7 +39,7 @@
 <!-- wp:column {"width":"48%"} -->
 <div class="wp-block-column" style="flex-basis:48%"><!-- wp:group {"className":"nc-plate","layout":{"type":"default"}} -->
 <div class="wp-block-group nc-plate"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"nc-plate__photo"} -->
-<figure class="wp-block-image size-large nc-plate__photo"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/plate-bowl.webp" alt="<?php esc_attr_e( 'A bowl of oats, banana and berries', 'nutri-care' ); ?>"/></figure>
+<figure class="wp-block-image size-large nc-plate__photo"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/plate-bowl.webp" alt="<?php esc_attr_e( 'A colourful salad bowl', 'nutri-care' ); ?>"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"className":"nc-plate__label nc-plate__label--grains"} -->

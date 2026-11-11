@@ -3,7 +3,7 @@ Contributors: lihsaa
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,7 +13,9 @@ A minimal, editorial block theme for dietitians and nutritionists.
 
 Nutri Care is a clean block theme with ready-made patterns for a dietitian or nutritionist website: a hero with a balanced-plate graphic, services, about, how it works, pricing, testimonials, FAQ, booking call-to-action, journal and contact.
 
-It works fully on its own. If you also want to build meal plans, give clients a portal and follow their food logs from your dashboard, the optional MeroDiet plugin (https://wordpress.org/plugins/merodiet/) pairs well with this theme. The theme shows one dismissible suggestion on the Themes screen and installs nothing unless you click the button.
+It works fully on its own. If you also want to build meal plans, give clients a portal and follow their food logs from your dashboard, the optional MeroDiet plugin (https://wordpress.org/plugins/merodiet/) pairs well with this theme. The theme shows one dismissible suggestion on the Themes screen and installs nothing unless you click the button. The suggestion only appears on sites running WordPress 6.9+ and PHP 8.1+, which the plugin requires.
+
+MeroDiet is a free plugin by the same author as this theme. It is optional and the theme works fully without it.
 
 Nutrition information in the demo content is placeholder text and is not medical advice.
 
@@ -26,12 +28,18 @@ Nutrition information in the demo content is placeholder text and is not medical
 == Frequently Asked Questions ==
 
 = Do I need the MeroDiet plugin? =
-No. The theme works without it.
+No. The theme works without it. MeroDiet is a free plugin by the same author as this theme. It is optional and the theme works fully without it.
 
 = Does the theme include a contact form? =
 No. Add a form block or plugin of your choice in the contact pattern.
 
 == Changelog ==
+
+= 1.0.2 =
+* The MeroDiet suggestion now only shows on sites that meet the plugin's minimum versions (WordPress 6.9, PHP 8.1).
+* Disclosed in the readme that MeroDiet is by the same author as the theme.
+* Replaced the Unsplash-sourced photos (plate-bowl.webp, fruit-platter.webp) with CC0 photos from StockSnap and updated the readme credits.
+* Converted assets/fonts/OFL-dm-sans.txt to LF line endings.
 
 = 1.0.1 =
 * Removed the custom-logo and custom-colors tags.
@@ -57,21 +65,20 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 = Images =
 
-All images are CC0 (public domain dedication) from Wikimedia Commons. License: https://creativecommons.org/publicdomain/zero/1.0/
-The two Unsplash-sourced photos were published on Unsplash before 5 June 2017, when Unsplash photos were still released under CC0, and were uploaded to Wikimedia Commons under CC0 in August 2017. The Commons pages below link to the archived originals.
+All images are CC0 (public domain dedication). License: https://creativecommons.org/publicdomain/zero/1.0/
 
-Healthy Breakfast by Federica Diliberto (federyka), photographed 2015.
+Salad bowl, via StockSnap (CC0).
 plate-bowl.webp
-https://commons.wikimedia.org/wiki/File:Healthy_Breakfast_(Unsplash).jpg
+https://stocksnap.io/photo/salad-bowl-PLOA1CWIRK
 
 Female doctor by Direct Media, via StockSnap (CC0).
 doctor-portrait.webp
 https://commons.wikimedia.org/wiki/File:Female_doctor.jpg
 https://stocksnap.io/photo/female-doctor-WINC1QDMT4
 
-Fruit Platter by Cecilia Par (famla_fint), photographed 2016.
+Food and fruits, via StockSnap (CC0).
 fruit-platter.webp
-https://commons.wikimedia.org/wiki/File:Fruit_Platter_(Unsplash).jpg
+https://stocksnap.io/photo/food-fruits-N7YQYVFWOU
 
 = Fonts =
 

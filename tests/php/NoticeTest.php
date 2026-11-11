@@ -22,7 +22,9 @@ class NoticeTest extends TestCase {
 		parent::tearDown();
 	}
 
-	private function show_context( array $plugins, bool $can_install = true, $dismissed = '' ): void {
+	private function show_context( array $plugins, bool $can_install = true, $dismissed = '', bool $wp_ok = true, bool $php_ok = true ): void {
+		Functions\when( 'is_wp_version_compatible' )->alias( fn( $v ) => $wp_ok && '6.9' === $v );
+		Functions\when( 'is_php_version_compatible' )->alias( fn( $v ) => $php_ok && '8.1' === $v );
 		Functions\when( 'current_user_can' )->justReturn( $can_install );
 		Functions\when( 'get_plugins' )->justReturn( $plugins );
 		Functions\when( 'is_plugin_active' )->alias( fn( $f ) => isset( $plugins[ $f ] ) && ! empty( $plugins[ $f ]['active'] ) );
@@ -48,6 +50,20 @@ class NoticeTest extends TestCase {
 
 	public function test_render_outputs_nothing_when_should_not_display(): void {
 		$this->show_context( array(), false );
+		ob_start();
+		( new Nutri_Care_Plugin_Notice() )->render();
+		$this->assertSame( '', ob_get_clean() );
+	}
+
+	public function test_render_outputs_nothing_below_the_plugin_minimum_wordpress_version(): void {
+		$this->show_context( array(), true, '', false, true );
+		ob_start();
+		( new Nutri_Care_Plugin_Notice() )->render();
+		$this->assertSame( '', ob_get_clean() );
+	}
+
+	public function test_render_outputs_nothing_below_the_plugin_minimum_php_version(): void {
+		$this->show_context( array(), true, '', true, false );
 		ob_start();
 		( new Nutri_Care_Plugin_Notice() )->render();
 		$this->assertSame( '', ob_get_clean() );
