@@ -3,7 +3,7 @@ Contributors: lihsaa
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -34,6 +34,9 @@ No. The theme works without it. MeroDiet is a free plugin by the same author as 
 No. Add a form block or plugin of your choice in the contact pattern.
 
 == Changelog ==
+
+= 1.0.3 =
+* Updated the theme screenshot to show the new hero photo.
 
 = 1.0.2 =
 * The MeroDiet suggestion now only shows on sites that meet the plugin's minimum versions (WordPress 6.9, PHP 8.1).

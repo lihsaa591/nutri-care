@@ -24,7 +24,7 @@ class Nutri_Care_Plugin_Notice {
 	const LEARN_MORE  = 'https://wordpress.org/plugins/merodiet/';
 	const MIN_WP      = '6.9';
 	const MIN_PHP     = '8.1';
-	const VERSION     = '1.0.2';
+	const VERSION     = '1.0.3';
 
 	/**
 	 * Whether the notice should be shown.
