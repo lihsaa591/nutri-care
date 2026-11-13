@@ -3,8 +3,8 @@ Theme Name: Nutri Care
 Theme URI: https://github.com/lihsaa591/nutri-care
 Author: Aashil Bijukshe
 Author URI: https://profiles.wordpress.org/lihsaa/
-Description: A minimal, editorial block theme for dietitians and nutritionists. Clean patterns for services, pricing, testimonials, FAQ, booking and a journal. Works well on its own, and pairs optionally with the MeroDiet plugin for meal plans, a client portal and progress tracking.
-Version: 1.0.1
+Description: A minimal, editorial block theme for dietitians and nutritionists. Clean patterns for services, pricing, testimonials, FAQ, booking and a journal. Works fully on its own, with block patterns, style variations and a bundled graphic.
+Version: 1.0.4
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 7.4
@@ -484,4 +484,110 @@ p {
 
 .wp-block-heading + .wp-block-group.nc-svc {
 	margin-block-start: 1.75rem;
+}
+
+/* Sticky footer: short pages keep the footer at the bottom of the viewport */
+.wp-site-blocks {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.wp-site-blocks > main {
+	flex: 1 0 auto;
+}
+
+.wp-site-blocks > footer {
+	margin-block-start: 0;
+}
+
+/* Footer: contain long or wide content so columns never stretch the layout */
+.has-deep-background-color .wp-block-columns {
+	flex-wrap: wrap;
+}
+
+.has-deep-background-color .wp-block-column {
+	min-width: 0;
+	overflow-wrap: anywhere;
+}
+
+.has-deep-background-color .wp-block-column :where(img, iframe, table, select, input) {
+	max-width: 100%;
+}
+
+.has-deep-background-color .wp-block-column :where(.wp-block-navigation, .wp-block-page-list, .wp-block-categories, .wp-block-latest-posts, .wp-block-archives) {
+	max-height: 18rem;
+	overflow-y: auto;
+}
+
+.has-deep-background-color .wp-block-column :where(.wp-block-calendar, .wp-block-tag-cloud, pre, table) {
+	max-width: 100%;
+	overflow-x: auto;
+}
+
+/* Pagination: query loop, paginated posts and comments */
+.wp-block-query-pagination,
+.post-nav-links,
+.wp-block-comments-pagination {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: var(--wp--preset--font-size--small);
+	font-weight: 600;
+	gap: 0.5rem;
+	margin-block-start: var(--wp--preset--spacing--50) !important;
+}
+
+.wp-block-query-pagination-numbers,
+.wp-block-comments-pagination-numbers {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.wp-block-query-pagination a,
+.wp-block-comments-pagination a,
+.post-nav-links a,
+.page-numbers,
+.post-page-numbers {
+	border: 1px solid var(--wp--preset--color--line);
+	border-radius: 999px;
+	color: var(--wp--preset--color--contrast);
+	display: inline-block;
+	line-height: 1;
+	min-width: 2.5rem;
+	padding: 0.6rem 1rem;
+	text-align: center;
+	text-decoration: none;
+	transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.wp-block-query-pagination a:hover,
+.wp-block-comments-pagination a:hover,
+.post-nav-links a:hover {
+	background-color: var(--wp--preset--color--soft);
+	border-color: var(--wp--preset--color--accent);
+}
+
+.page-numbers.current,
+.post-page-numbers.current,
+.post-nav-links > .post-page-numbers:not(a) {
+	background-color: var(--wp--preset--color--contrast);
+	border-color: var(--wp--preset--color--contrast);
+	color: var(--wp--preset--color--base);
+}
+
+.page-numbers.dots {
+	border-color: transparent;
+	min-width: 0;
+	padding-inline: 0.25rem;
+}
+
+.post-nav-links {
+	margin-block: var(--wp--preset--spacing--50) 0 !important;
+}
+
+.post-nav-links .post-nav-links-title,
+.post-nav-links > span:first-child:not(.post-page-numbers) {
+	margin-inline-end: 0.25rem;
 }

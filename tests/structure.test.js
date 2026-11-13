@@ -236,7 +236,7 @@ test( 'author details point at the WordPress.org profile', () => {
 
 test( 'languages/nutri-care.pot exists and carries the theme strings', () => {
 	const pot = read( 'languages/nutri-care.pot' );
-	assert.match( pot, /Project-Id-Version: Nutri Care 1\.0\.1/ );
+	assert.match( pot, /Project-Id-Version: Nutri Care 1\.0\.3/ );
 	assert.match( pot, /X-Domain: nutri-care/ );
 	[ 'Evidence-based care, explained clearly.', 'Request appointment', 'Nutri Care pairs well with MeroDiet', 'Meal plans', 'Nutri Care', 'Page not found', 'Book a call', 'Journal', 'No results found. Try a different search.', 'Pages', 'Hours' ].forEach( ( s ) =>
 		assert.ok( pot.includes( `msgid "${ s }"` ), `pot lacks "${ s }"` )

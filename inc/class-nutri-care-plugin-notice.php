@@ -22,7 +22,9 @@ class Nutri_Care_Plugin_Notice {
 	const META_KEY    = 'nutri_care_merodiet_notice_dismissed';
 	const ACTION      = 'nutri_care_dismiss_notice';
 	const LEARN_MORE  = 'https://wordpress.org/plugins/merodiet/';
-	const VERSION     = '1.0.1';
+	const MIN_WP      = '6.9';
+	const MIN_PHP     = '8.1';
+	const VERSION     = '1.0.4';
 
 	/**
 	 * Whether the notice should be shown.
@@ -34,6 +36,15 @@ class Nutri_Care_Plugin_Notice {
 	 */
 	public static function should_display( $can_install, $is_active, $dismissed ) {
 		return $can_install && ! $is_active && ! $dismissed;
+	}
+
+	/**
+	 * Whether this site meets the MeroDiet plugin's minimum WordPress and PHP versions.
+	 *
+	 * @return bool
+	 */
+	public static function meets_plugin_requirements() {
+		return is_wp_version_compatible( self::MIN_WP ) && is_php_version_compatible( self::MIN_PHP );
 	}
 
 	/**
@@ -54,7 +65,7 @@ class Nutri_Care_Plugin_Notice {
 	 */
 	private function get_state() {
 		$screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
-		if ( ! $screen || 'themes' !== $screen->id ) {
+		if ( ! $screen || 'themes' !== $screen->id || ! self::meets_plugin_requirements() ) {
 			return array(
 				'visible'   => false,
 				'installed' => false,
