@@ -3,7 +3,7 @@ Contributors: lihsaa
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -34,6 +34,11 @@ No. The theme works without it. MeroDiet is a free plugin by the same author as 
 No. Add a form block or plugin of your choice in the contact pattern.
 
 == Changelog ==
+
+= 1.0.4 =
+* The footer now stays at the bottom of the window on pages with short content.
+* Styled pagination for the blog, archives, paginated posts and comments.
+* Long or wide footer content now stays inside its column instead of stretching the footer.
 
 = 1.0.3 =
 * Updated the theme screenshot to show the new hero photo.
